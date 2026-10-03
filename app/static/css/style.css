@@ -4663,19 +4663,50 @@ p {
 @media (max-width: 900px) {
   .release-rail {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 18px;
+  }
+
+  .release-feature {
+    border-radius: 18px;
   }
 
   .release-feature-info {
-    padding: 20px 20px 22px;
+    padding: 16px 16px 18px;
   }
 
   .release-feature-title {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
+    line-height: 1.2;
   }
 
   .release-feature-media {
     aspect-ratio: 16 / 10;
+    background: #FFFFFF;
+  }
+
+  .release-feature-media img {
+    padding: 8px 12px;
+    object-fit: contain;
+  }
+
+  .release-rail-list {
+    padding: 16px 14px;
+    border-radius: 18px;
+  }
+
+  .release-rail-item {
+    padding: 8px;
+    gap: 12px;
+  }
+
+  .release-rail-thumb {
+    width: 52px;
+    height: 52px;
+    padding: 4px;
+  }
+
+  .release-rail-name {
+    font-size: 0.86rem;
   }
 }
 
@@ -7610,45 +7641,144 @@ section[aria-labelledby="similar-heading"] h2 {
 
   .hero-sticky-viewport.hero-sticky-viewport--blueprint,
   .hero-sticky-viewport.hero-sticky-viewport--white {
-    padding: 24px 0 32px;
+    padding: 16px 0 24px;
     min-height: auto;
   }
 
+  /* 1. Hide excessive technical clutter only on mobile */
+  .hero-blueprint-watermark,
+  .hero-blueprint-hud,
+  .hero-blueprint-axis-marker,
+  .hero-shoe-hint--blueprint,
+  .hero-shoe-progress--blueprint,
+  .hero-blueprint-tag-text, /* Hides "ISSUE: 01 // ARCHITECTURAL SPEC" */
+  .hero-blueprint-kicker,   /* Hides redundant green kicker */
+  .hero-shoe-hint--clean {
+    display: none !important;
+  }
+
+  /* 2. Sleek, minimal location badge */
+  .hero-blueprint-tagline {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px 4px 8px;
+    margin: 0 0 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(23, 26, 30, 0.08);
+    border-radius: 999px;
+  }
+
+  .hero-blueprint-dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .hero-blueprint-tag-badge {
+    padding: 2px 8px;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    border-radius: 999px;
+  }
+
+  /* 3. Bold, crisp mobile title & description */
   .hero-blueprint-title,
   .hero-main-title {
-    font-size: clamp(2.3rem, 7.8vw, 3.2rem);
-    line-height: 1.02;
+    font-size: clamp(2rem, 7.5vw, 2.5rem);
+    line-height: 1.04;
     letter-spacing: -0.025em;
+    margin: 0 0 10px;
   }
 
-  .hero-blueprint-watermark {
-    top: 40%;
-  }
-
-  .hero-blueprint-watermark span {
-    font-size: clamp(4rem, 15vw, 6.4rem);
-    letter-spacing: 0.08em;
-    -webkit-text-stroke: 2px rgba(15, 23, 42, 0.28);
-    color: rgba(15, 23, 42, 0.06);
-  }
-
-  .blueprint-hud-chip {
-    font-size: 0.58rem;
-    padding: 2px 6px;
-  }
-
-  .hero-shoe-hint--blueprint {
-    bottom: -38px;
-    font-size: 0.62rem;
-    padding: 4px 10px;
-  }
-
-  .hero-shoe-stage--big {
+  .hero-blueprint-desc,
+  .hero-main-desc {
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: #334155;
+    margin: 0 0 12px;
     max-width: 100%;
   }
 
-  .hero-shoe-hint--clean {
-    display: none;
+  /* 4. Shoe visual stage - clean, centered, no clutter */
+  .hero-blueprint-right {
+    order: 2;
+    min-height: auto;
+    margin: 2px 0 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hero-shoe-stage--big,
+  .hero-shoe-stage--blueprint {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    max-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-shoe-fallback {
+    max-height: 200px;
+    width: auto;
+    max-width: 92%;
+    object-fit: contain;
+    filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.1));
+  }
+
+  /* 5. Mobile Action Buttons FIRST (above specs) so they are immediately clickable */
+  .hero-blueprint-body-block {
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .hero-blueprint-actions {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 2px;
+  }
+
+  .btn-blueprint-primary,
+  .btn-blueprint-ghost {
+    width: 100%;
+    height: 48px;
+    font-size: 0.86rem;
+    font-weight: 800;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 12px;
+  }
+
+  /* 6. Compact trust specs on mobile */
+  .hero-blueprint-specs {
+    order: 2;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px 14px;
+    margin-bottom: 0;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(23, 26, 30, 0.07);
+    border-radius: 12px;
+  }
+
+  .hero-blueprint-spec-item {
+    font-size: 0.76rem;
+    gap: 8px;
+    color: #334155;
   }
 }
 
@@ -11173,8 +11303,9 @@ section[aria-labelledby="similar-heading"] h2 {
 /* 2. Floating Contact Dock Scaling on Mobile */
 @media (max-width: 600px) {
   .floating-contact-dock {
-    right: 14px;
-    bottom: 14px;
+    right: 12px;
+    bottom: 12px;
+    flex-direction: row;
     gap: 8px;
     z-index: 80;
   }
