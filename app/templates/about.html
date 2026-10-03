@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="section page-header">
+  <div class="section-inner">
+    <h1>About {{ business.name }}</h1>
+  </div>
+</section>
+<section class="section">
+  <div class="section-inner about-content">
+    <p>{{ business.description }}</p>
+    <p>Located in Guduvanchery, Chennai, {{ business.name }} stocks footwear across sneakers, sports shoes, sandals, slippers, flip-flops and boots, from brands including {{ brands | join(', ') }}.</p>
+    <p>For availability, sizes and current pricing, message us directly on WhatsApp — we reply with real-time stock information from the store.</p>
+    <a class="btn btn-primary" href="{{ whatsapp_link('Hi Soleslay, I would like to know more about your store.') }}" target="_blank" rel="noopener">Chat with us on WhatsApp</a>
+  </div>
+</section>
+{% endblock %}

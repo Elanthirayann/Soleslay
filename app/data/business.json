@@ -1,0 +1,31 @@
+{
+  "name": "Soleslay",
+  "legal_name": "Soleslay Footwear",
+  "tagline": "Premium footwear in Guduvanchery, Chennai",
+  "description": "Soleslay is a footwear store in Guduvanchery, Chennai stocking sneakers, sports shoes, sandals, slippers and boots from brands including Woodland, Nike, Adidas, Onitsuka Tiger, Converse, Hoka and Under Armour.",
+  "address_line1": "1, Adhi Parasakthi Nagar, GST Road, Nandhivaram,",
+  "address_line2": "opp. to MAX FASHION, Mahalakshmi Nagar,",
+  "city": "Guduvancheri",
+  "state": "Tamil Nadu",
+  "postal_code": "603202",
+  "country": "IN",
+  "phone": "6374333780",
+  "whatsapp_number": "917603832102",
+  "email": "soleslay@gmail.com",
+  "opening_hours": [
+    "Monday: 10:00 AM - 10:00 PM",
+    "Tuesday: 10:00 AM - 10:00 PM",
+    "Wednesday: 10:00 AM - 10:00 PM",
+    "Thursday: 10:00 AM - 10:00 PM",
+    "Friday: 10:00 AM - 10:00 PM",
+    "Saturday: 10:00 AM - 10:00 PM",
+    "Sunday: 10:00 AM - 10:00 PM"
+  ],
+  "latitude": 12.8647,
+  "longitude": 80.0594,
+  "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Soleslay+shoes,+Guduvancheri",
+  "instagram_url": "https://www.instagram.com/soleslay.chennai/?hl=en",
+  "facebook_url": "#",
+  "youtube_url": "#",
+  "domain": "https://www.soleslay.in"
+}

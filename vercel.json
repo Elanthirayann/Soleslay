@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "functions": {
+    "api/index.py": {
+      "includeFiles": "app/**",
+      "maxDuration": 30
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api/index.py"
+    }
+  ]
+}

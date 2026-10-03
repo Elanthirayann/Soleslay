@@ -1,0 +1,475 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Architectural Flagship Contact Hero -->
+<section class="section contact-hero-section">
+  <div class="section-inner">
+    <div class="contact-eyebrow-row">
+      <span class="contact-spec-tag">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        ISSUE 01 // STORE SPEC
+      </span>
+      <div class="contact-live-pill is-open" id="store-live-pill" aria-live="polite">
+        <span class="contact-live-dot" aria-hidden="true"></span>
+        <span id="store-live-text">OPEN NOW &middot; Closes 10:00 PM</span>
+      </div>
+      <span class="contact-loc-tag">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/></svg>
+        LOC: 12.8647&deg; N, 80.0594&deg; E &middot; CHENNAI
+      </span>
+    </div>
+
+    <h1 class="contact-title">VISIT OUR FLAGSHIP</h1>
+    <p class="contact-kicker">ORIGINAL FOOTWEAR ARCHIVE &middot; GUDUVANCHERY, CHENNAI</p>
+    <p class="contact-desc">
+      Step into our physical footwear archive. Walk in for in-store try-on before you buy, inspect verified deadstock pairs, consult directly with our curators, or reach our direct pan-India concierge for instant sourcing.
+    </p>
+
+    <div class="contact-trust-strip">
+      <div class="contact-trust-item">
+        <span class="contact-trust-dot" aria-hidden="true"></span>
+        <span>100% Authentic Deadstock</span>
+      </div>
+      <div class="contact-trust-item">
+        <span class="contact-trust-dot" aria-hidden="true"></span>
+        <span>Physical In-Store Try-On</span>
+      </div>
+      <div class="contact-trust-item">
+        <span class="contact-trust-dot" aria-hidden="true"></span>
+        <span>GST Road Arterial Corridor</span>
+      </div>
+      <div class="contact-trust-item">
+        <span class="contact-trust-dot" aria-hidden="true"></span>
+        <span>Pan-India Express Dispatch</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3-Column Command Hub -->
+<section class="section contact-hub-section">
+  <div class="section-inner contact-grid">
+
+    <!-- CARD 1: STORE ADDRESS & DIRECTIONS -->
+    <div class="contact-card">
+      <span class="contact-card-top-tag">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Physical Flagship
+      </span>
+      <div class="contact-card-header">
+        <div class="contact-card-icon-wrap" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h2>Store Address</h2>
+      </div>
+
+      <div class="contact-card-body">
+        <div class="contact-landmark-badge">
+          <strong>Landmark:</strong> Opp. to MAX FASHION, Mahalakshmi Nagar
+        </div>
+        <address class="contact-address-text" id="copy-address-target">
+          {{ business.name }} Footwear<br>
+          {{ business.address_line1 }}{% if business.address_line2 %} {{ business.address_line2 }}{% endif %}<br>
+          {{ business.city }}, {{ business.state }} &ndash; {{ business.postal_code }}<br>
+          India
+        </address>
+
+        <div class="contact-card-actions">
+          {% if business.google_maps_url and 'REPLACE' not in business.google_maps_url %}
+          <a class="btn-contact-primary" href="{{ business.google_maps_url }}" target="_blank" rel="noopener">
+            <span>Get Directions</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+          </a>
+          {% endif %}
+          <button type="button" class="btn-contact-ghost" data-copy-trigger="address" data-copy-value="{{ business.address_line1 }} {{ business.address_line2 or '' }}, {{ business.city }}, {{ business.state }} - {{ business.postal_code }}">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span>Copy Full Address</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 2: DIRECT CONCIERGE & COMMS -->
+    <div class="contact-card">
+      <span class="contact-card-top-tag">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Instant Response
+      </span>
+      <div class="contact-card-header">
+        <div class="contact-card-icon-wrap" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        </div>
+        <h2>Reach Concierge</h2>
+      </div>
+
+      <div class="contact-card-body">
+        <div class="contact-reach-list">
+          {% if business.phone and 'REPLACE' not in business.phone %}
+          <div class="contact-reach-item">
+            <div class="contact-reach-info">
+              <span class="contact-reach-label">Direct Store Phone</span>
+              <a class="contact-reach-val" href="tel:{{ business.phone }}">+91 {{ business.phone }}</a>
+            </div>
+            <button type="button" class="contact-reach-btn-icon" data-copy-trigger="phone" data-copy-value="{{ business.phone }}" title="Copy Phone Number" aria-label="Copy Phone Number">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            </button>
+          </div>
+          {% endif %}
+
+          {% if business.email and 'REPLACE' not in business.email %}
+          <div class="contact-reach-item">
+            <div class="contact-reach-info">
+              <span class="contact-reach-label">Official Email</span>
+              <a class="contact-reach-val" href="mailto:{{ business.email }}">{{ business.email }}</a>
+            </div>
+            <button type="button" class="contact-reach-btn-icon" data-copy-trigger="email" data-copy-value="{{ business.email }}" title="Copy Email Address" aria-label="Copy Email Address">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            </button>
+          </div>
+          {% endif %}
+
+          {% if business.instagram_url and 'REPLACE' not in business.instagram_url %}
+          <div class="contact-reach-item">
+            <div class="contact-reach-info">
+              <span class="contact-reach-label">Instagram Community</span>
+              <a class="contact-reach-val" href="{{ business.instagram_url }}" target="_blank" rel="noopener">@soleslay.chennai</a>
+            </div>
+            <a class="contact-reach-btn-icon" href="{{ business.instagram_url }}" target="_blank" rel="noopener" aria-label="Visit Instagram">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+            </a>
+          </div>
+          {% endif %}
+        </div>
+
+        <div class="contact-card-actions">
+          <a class="btn-contact-wa" href="{{ whatsapp_link('Hi Soleslay, I would like to visit the store. Could you share directions and current timings?') }}" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.78 14.15c-.24.68-1.2 1.25-1.84 1.34-.49.07-1.12.1-3.26-.78-2.73-1.13-4.5-3.9-4.64-4.08-.14-.19-1.11-1.48-1.11-2.82 0-1.34.7-2 1-2.28.24-.24.52-.3.7-.3.17 0 .35 0 .5.01.17.01.39-.06.61.47.23.55.78 1.9.85 2.04.07.14.12.3.02.49-.09.19-.14.3-.28.47-.14.17-.3.37-.43.5-.14.14-.29.29-.12.58.17.29.74 1.22 1.6 1.98 1.1 0.98 2.03 1.28 2.32 1.42.29.14.46.12.63-.07.17-.19.74-.86.94-1.15.2-.29.4-.24.68-.14.28.1 1.77.83 2.07.98.3.15.5.22.58.34.07.12.07.7-.17 1.38z"/></svg>
+            <span>Chat on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 3: STORE HOURS & SCHEDULE -->
+    <div class="contact-card">
+      <span class="contact-card-top-tag">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Weekly Schedule
+      </span>
+      <div class="contact-card-header">
+        <div class="contact-card-icon-wrap" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h2>Store Hours</h2>
+      </div>
+
+      <div class="contact-card-body">
+        <ul class="contact-schedule-list" id="contact-schedule-list">
+          {% if business.opening_hours and business.opening_hours[0] and 'REPLACE' not in business.opening_hours[0] %}
+            {% for line in business.opening_hours %}
+              {% set parts = line.split(':') %}
+              {% if parts|length >= 2 %}
+                {% set day_name = parts[0]|trim %}
+                {% set time_val = parts[1:]|join(':')|trim %}
+                <li class="contact-day-row" data-day="{{ day_name|lower }}">
+                  <span class="contact-day-name">{{ day_name }}</span>
+                  <span class="contact-day-time">{{ time_val }}</span>
+                </li>
+              {% else %}
+                <li class="contact-day-row">
+                  <span class="contact-day-name">{{ line }}</span>
+                </li>
+              {% endif %}
+            {% endfor %}
+          {% else %}
+            <li class="contact-day-row">
+              <span class="contact-day-name">Daily</span>
+              <span class="contact-day-time">10:00 AM &ndash; 10:00 PM</span>
+            </li>
+          {% endif %}
+        </ul>
+
+        <div class="contact-walkin-note">
+          <strong>Try-On Policy:</strong> Walk-ins are welcome 7 days a week. Feel free to try multiple sizes and silhouettes with no appointment required.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Flagship Navigation & Atmosphere Video Experience -->
+<section class="section contact-exp-section">
+  <div class="section-inner">
+    <div class="contact-exp-header">
+      <p class="section-eyebrow">Location &amp; Storefront</p>
+      <h2 style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 900; margin: 0 0 6px 0;">FLAGSHIP NAVIGATION &amp; ATMOSPHERE</h2>
+      <p style="font-size: 0.95rem; color: var(--steel); margin: 0;">Situated along the prime GST Road arterial corridor &mdash; effortless access from Tambaram, OMR, and Chennai International Airport.</p>
+    </div>
+
+    <div class="contact-exp-grid">
+      <!-- LIVE INTERACTIVE GOOGLE MAP EMBED -->
+      <div class="contact-map-frame">
+        <div class="contact-map-topbar">
+          <div class="contact-map-topbar-title">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+            <span>Soleslay Flagship &middot; GST Road (Opp. Max Fashion)</span>
+          </div>
+          {% if business.google_maps_url %}
+          <a class="contact-map-pin-btn" href="{{ business.google_maps_url }}" target="_blank" rel="noopener">
+            Open Full Map &rarr;
+          </a>
+          {% endif %}
+        </div>
+
+        <iframe
+          class="contact-map-embed"
+          src="https://maps.google.com/maps?q=Soleslay+shoes,+Guduvancheri&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+          title="Soleslay Store Location Map"
+          loading="lazy"
+          allowfullscreen>
+        </iframe>
+
+        <div class="contact-transit-tags">
+          <span class="contact-transit-chip">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            Tambaram: ~15 mins
+          </span>
+          <span class="contact-transit-chip">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+            Airport: ~25 mins
+          </span>
+          <span class="contact-transit-chip">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M12 3v8M8 19l-2 3M16 19l2 3"/></svg>
+            Guduvanchery Station: ~5 mins
+          </span>
+          <span class="contact-transit-chip">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            GST Road Frontage
+          </span>
+        </div>
+      </div>
+
+      <!-- STORE WALKTHROUGH VIDEO -->
+      <div class="contact-video-card">
+        <div class="contact-map-topbar">
+          <div class="contact-map-topbar-title">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            <span>Flagship Interior &middot; Sneaker Archive</span>
+          </div>
+          <span style="font-size: 0.72rem; font-weight: 700; color: #10B981; display: flex; align-items: center; gap: 5px;">
+            <span style="width: 7px; height: 7px; border-radius: 50%; background: #10B981; display: inline-block;"></span>
+            HD Walkthrough
+          </span>
+        </div>
+
+        <div class="contact-video-wrap">
+          <span class="contact-video-overlay-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            Store Walkthrough
+          </span>
+
+          <video
+            class="contact-video-media"
+            poster="/static/images/hero-poster.jpg?v=2"
+            loop
+            playsinline
+            preload="metadata"
+            data-store-video
+            aria-label="A look inside the {{ business.name }} flagship store">
+            <source src="/static/video/soleslay-store-walkthrough.mp4?v=2" type="video/mp4">
+          </video>
+
+          <button type="button" class="store-media-sound" data-video-sound-toggle aria-label="Toggle sound">
+            <svg class="icon-sound-on" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+            </svg>
+            <svg class="icon-sound-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <line x1="23" y1="9" x2="17" y2="15"></line>
+              <line x1="17" y1="9" x2="23" y2="15"></line>
+            </svg>
+            <span class="store-media-sound-text">Sound</span>
+          </button>
+
+          <button type="button" class="store-media-play" data-video-toggle aria-label="Play store walkthrough video">
+            <span class="store-media-play-ring"></span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+
+        <div class="contact-video-facts">
+          <div class="contact-fact-item">
+            <span class="contact-fact-num">100+</span>
+            <span class="contact-fact-label">Styles On Wall</span>
+          </div>
+          <div class="contact-fact-item">
+            <span class="contact-fact-num">100%</span>
+            <span class="contact-fact-label">Deadstock Guaranteed</span>
+          </div>
+          <div class="contact-fact-item">
+            <span class="contact-fact-num">Try-On</span>
+            <span class="contact-fact-label">Comfort Lounge</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Interactive Quick-Action Prompts -->
+<section class="section contact-quick-prompts-section">
+  <div class="section-inner">
+    <div class="contact-prompts-box">
+      <div>
+        <h3 class="contact-prompts-heading">WHAT CAN WE HELP YOU WITH?</h3>
+        <p class="contact-prompts-sub">Tap any prompt to launch an instant pre-filled WhatsApp conversation:</p>
+      </div>
+
+      <div class="contact-prompts-chips">
+        <a class="contact-prompt-chip" href="{{ whatsapp_link('Hi Soleslay, I would like to check if you have my size in stock. Do you have UK 7, 8, 9 or 10 available?') }}" target="_blank" rel="noopener">
+          <span>👟 Check Size Availability</span>
+        </a>
+        <a class="contact-prompt-chip" href="{{ whatsapp_link('Hi Soleslay, could you send me your exact Google Maps location pin and best landmark?') }}" target="_blank" rel="noopener">
+          <span>📍 Send Store Location Pin</span>
+        </a>
+        <a class="contact-prompt-chip" href="{{ whatsapp_link('Hi Soleslay, I am looking for a specific sneaker model. Can you help me source it?') }}" target="_blank" rel="noopener">
+          <span>🔍 Source a Specific Sneaker</span>
+        </a>
+        <a class="contact-prompt-chip" href="{{ whatsapp_link('Hi Soleslay, what are your pan-India shipping times and delivery charges?') }}" target="_blank" rel="noopener">
+          <span>📦 Pan-India Shipping Query</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Assurance Highlights -->
+    <div class="contact-assurances-grid">
+      <div class="contact-assurance-card">
+        <span class="contact-assurance-icon">🛡️</span>
+        <h4 class="contact-assurance-title">100% Authentic Guarantee</h4>
+        <p class="contact-assurance-desc">Every silhouette is physically inspected for genuine materials, box labels, and manufacturer verification.</p>
+      </div>
+      <div class="contact-assurance-card">
+        <span class="contact-assurance-icon">👟</span>
+        <h4 class="contact-assurance-title">In-Store Sizing &amp; Try-On</h4>
+        <p class="contact-assurance-desc">Walk in anytime to test sizes, feel cushioning, and find your true fit with guidance from our footwear curators.</p>
+      </div>
+      <div class="contact-assurance-card">
+        <span class="contact-assurance-icon">💳</span>
+        <h4 class="contact-assurance-title">All Payment Modes</h4>
+        <p class="contact-assurance-desc">Seamless checkout via UPI (GPay, PhonePe, Paytm), Visa, Mastercard, RuPay cards, and Cash.</p>
+      </div>
+      <div class="contact-assurance-card">
+        <span class="contact-assurance-icon">⚡</span>
+        <h4 class="contact-assurance-title">Pan-India Express Sourcing</h4>
+        <p class="contact-assurance-desc">If your desired model or size isn't immediately on the shelf, our direct network sources it within 24&ndash;48 hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Toast notification for copy actions -->
+<div class="contact-toast" id="contact-toast" role="status" aria-live="polite">
+  Copied to clipboard!
+</div>
+
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+(function() {
+  "use strict";
+
+  // 1. Live Store Open / Closed Status Calculation based on Indian Standard Time (UTC+5:30)
+  function updateLiveStoreStatus() {
+    var pill = document.getElementById("store-live-pill");
+    var text = document.getElementById("store-live-text");
+    if (!pill || !text) return;
+
+    // Calculate current time in IST (Asia/Kolkata: UTC+5.5)
+    var now = new Date();
+    var utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+    var istTime = new Date(utc + (3600000 * 5.5));
+
+    var hours = istTime.getHours();
+    var minutes = istTime.getMinutes();
+    var currentDecimal = hours + (minutes / 60);
+
+    // Store hours: 10:00 AM (10.0) to 10:00 PM (22.0)
+    var isOpen = currentDecimal >= 10.0 && currentDecimal < 22.0;
+
+    if (isOpen) {
+      pill.classList.remove("is-closed");
+      pill.classList.add("is-open");
+      var remainingHours = 22 - hours;
+      text.textContent = "OPEN NOW · Closes 10:00 PM";
+    } else {
+      pill.classList.remove("is-open");
+      pill.classList.add("is-closed");
+      text.textContent = "CURRENTLY CLOSED · Opens 10:00 AM";
+    }
+
+    // Highlight current day in schedule
+    var dayNames = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+    var currentDay = dayNames[istTime.getDay()];
+    var rows = document.querySelectorAll(".contact-day-row");
+    rows.forEach(function(row) {
+      var d = row.getAttribute("data-day");
+      if (d === currentDay) {
+        row.classList.add("is-today");
+      } else {
+        row.classList.remove("is-today");
+      }
+    });
+  }
+
+  updateLiveStoreStatus();
+
+  // 2. Interactive Copy to Clipboard with Toast feedback
+  var toast = document.getElementById("contact-toast");
+  var toastTimeout = null;
+
+  function showToast(msg) {
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.classList.add("is-active");
+    if (toastTimeout) clearTimeout(toastTimeout);
+    toastTimeout = setTimeout(function() {
+      toast.classList.remove("is-active");
+    }, 2400);
+  }
+
+  document.querySelectorAll("[data-copy-trigger]").forEach(function(btn) {
+    btn.addEventListener("click", function(e) {
+      e.preventDefault();
+      var val = btn.getAttribute("data-copy-value") || "";
+      var type = btn.getAttribute("data-copy-trigger") || "text";
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(val).then(function() {
+          showToast(type.charAt(0).toUpperCase() + type.slice(1) + " copied to clipboard!");
+        }).catch(function() {
+          showToast("Copied to clipboard!");
+        });
+      } else {
+        // Fallback for older browsers
+        var tempInput = document.createElement("textarea");
+        tempInput.value = val;
+        tempInput.style.position = "fixed";
+        tempInput.style.opacity = "0";
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        try {
+          document.execCommand("copy");
+          showToast("Copied to clipboard!");
+        } catch(err) {}
+        document.body.removeChild(tempInput);
+      }
+    });
+  });
+
+})();
+</script>
+{% endblock %}

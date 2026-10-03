@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}Media{% endblock %}
+{% block heading %}Store Media{% endblock %}
+{% block content %}
+
+<div class="card">
+  <h2>Upload media</h2>
+  <form method="post" action="/admin/media/upload" enctype="multipart/form-data">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <div class="form-grid">
+      <div class="form-group">
+        <label for="kind">Type</label>
+        <select id="kind" name="kind">
+          <option value="store_image">Store photo</option>
+          <option value="store_video">Store video (MP4/WEBM, max 50 MB)</option>
+          <option value="hero_poster">Hero poster image</option>
+          <option value="homepage_media">Homepage media</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="alt">Alt text / caption</label>
+        <input type="text" id="alt" name="alt">
+      </div>
+      <div class="form-group full">
+        <label for="file">File</label>
+        <input type="file" id="file" name="file" required>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Upload</button>
+  </form>
+</div>
+
+<div class="card">
+  <h2>Library</h2>
+  {% if assets %}
+  <div class="image-grid">
+    {% for a in assets %}
+    <div class="image-tile">
+      {% if a.path.endswith('.mp4') or a.path.endswith('.webm') %}
+      <video src="{{ a.path }}" style="width:100%;height:120px;object-fit:cover;" muted></video>
+      {% else %}
+      <img src="{{ a.path }}" alt="{{ a.alt or '' }}">
+      {% endif %}
+      <div class="image-tile-body">
+        <div>{{ kind_labels.get(a.kind, a.kind) }}</div>
+        <div class="hint">{{ a.uploaded_at.strftime("%d %b %Y") }}</div>
+        <div class="image-tile-actions">
+          <form method="post" action="/admin/media/{{ a.id }}/delete" data-confirm="Delete this media file?">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+            <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="empty-state">No media uploaded yet.</div>
+  {% endif %}
+</div>
+
+{% endblock %}

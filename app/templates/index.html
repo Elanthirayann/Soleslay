@@ -1,0 +1,612 @@
+{% extends "base.html" %}
+
+{% block extra_head %}
+<link rel="preload" as="image" href="/static/images/hero-shoe-frames/frame-001.webp" fetchpriority="high">
+{% endblock %}
+
+{% block content %}
+
+<section class="hero hero-spotlight hero-blueprint" id="hero" data-hero-section data-wa-number="{{ clean_whatsapp_number(business.whatsapp_number) }}">
+  <!-- Architectural Technical Blueprint Grid Background & Watermarks -->
+  <div class="hero-blueprint-grid" aria-hidden="true"></div>
+  <div class="hero-blueprint-watermark" aria-hidden="true">
+    <span>SOLESLAY</span>
+  </div>
+  <div class="hero-blueprint-axis-marker hero-blueprint-axis--top-left" aria-hidden="true">
+    <span>STOCK: {{ products|length or '489' }}</span>
+  </div>
+  <div class="hero-blueprint-axis-marker hero-blueprint-axis--top-right" aria-hidden="true">
+    <span>LOC: 12.8369° N, 80.0583° E</span>
+  </div>
+  <div class="hero-blueprint-axis-marker hero-blueprint-axis--bottom-left" aria-hidden="true">
+    <span>SOLESLAY // ISSUE 01</span>
+  </div>
+  <div class="hero-blueprint-axis-marker hero-blueprint-axis--bottom-right" aria-hidden="true">
+    <span>VERIFIED AUTHENTIC</span>
+  </div>
+
+  <div class="hero-scroll-track" data-hero-scroll-track>
+    <div class="hero-sticky-viewport hero-sticky-viewport--blueprint" data-hero-sticky>
+      <div class="hero-spotlight-inner hero-spotlight-inner--wide">
+        <div class="hero-layout-grid hero-blueprint-layout" data-hero-panel>
+
+          <!-- LEFT COLUMN: ARCHITECTURAL STREETWEAR HEADLINE & SPECS -->
+          <div class="hero-left-column hero-blueprint-left">
+            <div class="hero-blueprint-headline-block">
+              <!-- Technical Tag / Issue Pill -->
+              <div class="hero-blueprint-tagline">
+                <span class="hero-blueprint-dot"></span>
+                <span class="hero-blueprint-tag-text">ISSUE: 01 // ARCHITECTURAL SPEC</span>
+                <span class="hero-blueprint-tag-badge">CHENNAI FLAGSHIP</span>
+              </div>
+
+              <!-- Big Bold Deconstructed Headline -->
+              <h1 class="hero-main-title hero-blueprint-title">
+                <span class="hero-title-row">STEP INTO</span>
+                <span class="hero-title-row">YOUR NEXT PAIR</span>
+              </h1>
+
+              <p class="hero-blueprint-kicker">ORIGINAL DEADSTOCK &amp; PERFORMANCE FOOTWEAR</p>
+              <p class="hero-main-desc hero-blueprint-desc">
+                Curated original sneakers, runners and daily trainers from global icons &mdash; physically inspected and available for in-store try-on at our Guduvanchery flagship.
+              </p>
+            </div>
+
+            <div class="hero-blueprint-body-block">
+              <!-- Technical Trust Specs (No individual shoe prices or sizes) -->
+              <div class="hero-blueprint-specs">
+                <div class="hero-blueprint-spec-item">
+                  <span class="hero-spec-bullet"></span>
+                  <span>100% Verified Authentic &middot; Deadstock Guarantee</span>
+                </div>
+                <div class="hero-blueprint-spec-item">
+                  <span class="hero-spec-bullet"></span>
+                  <span>In-Store Try-On Before You Buy &middot; Guduvanchery</span>
+                </div>
+                <div class="hero-blueprint-spec-item">
+                  <span class="hero-spec-bullet"></span>
+                  <span>Express Pan-India Sourcing &middot; 24&ndash;48 Hours</span>
+                </div>
+              </div>
+
+              <!-- High-Impact Industrial Action Buttons -->
+              <div class="hero-blueprint-actions">
+                <a class="btn-blueprint-primary" data-magnetic href="/products">
+                  <span class="btn-blueprint-bracket">[</span>
+                  <span>VIEW COLLECTION</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  <span class="btn-blueprint-bracket">]</span>
+                </a>
+                <a class="btn-blueprint-ghost" data-magnetic href="{{ whatsapp_link('Hi Soleslay, I am looking for a pair of sneakers. Can you help me find my size and model?') }}" target="_blank" rel="noopener">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.78 14.15c-.24.68-1.2 1.25-1.84 1.34-.49.07-1.12.1-3.26-.78-2.73-1.13-4.5-3.9-4.64-4.08-.14-.19-1.11-1.48-1.11-2.82 0-1.34.7-2 1-2.28.24-.24.52-.3.7-.3.17 0 .35 0 .5.01.17.01.39-.06.61.47.23.55.78 1.9.85 2.04.07.14.12.3.02.49-.09.19-.14.3-.28.47-.14.17-.3.37-.43.5-.14.14-.29.29-.12.58.17.29.74 1.22 1.6 1.98 1.1 0.98 2.03 1.28 2.32 1.42.29.14.46.12.63-.07.17-.19.74-.86.94-1.15.2-.29.4-.24.68-.14.28.1 1.77.83 2.07.98.3.15.5.22.58.34.07.12.07.7-.17 1.38z"/></svg>
+                  <span>WHATSAPP SOURCING</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: 50-FRAME EXPLODED 3D SCROLL CANVAS WITH BLUEPRINT HUD -->
+          <div class="hero-right-column hero-blueprint-right" data-hero-shoe-media>
+            <div class="hero-blueprint-hud" aria-hidden="true">
+              <span class="blueprint-hud-chip blueprint-hud-chip--tl">DECONSTRUCT // 01</span>
+              <span class="blueprint-hud-chip blueprint-hud-chip--tr">50-FRAME EXPLODED VIEW</span>
+              <span class="blueprint-hud-corner blueprint-hud-corner--tl"></span>
+              <span class="blueprint-hud-corner blueprint-hud-corner--tr"></span>
+              <span class="blueprint-hud-corner blueprint-hud-corner--bl"></span>
+              <span class="blueprint-hud-corner blueprint-hud-corner--br"></span>
+            </div>
+
+            <div class="hero-shoe-stage hero-shoe-stage--big hero-shoe-stage--blueprint"
+                 data-shoe-stage
+                 data-shoe-frame-base="/static/images/hero-shoe-frames/frame-"
+                 data-shoe-frame-count="50"
+                 data-shoe-frame-width="1400"
+                 data-shoe-frame-height="788">
+
+              <!-- Dynamic 3D Parallax Shadow -->
+              <div class="hero-shoe-parallax-shadow" aria-hidden="true"></div>
+
+              <!-- Static fallback -->
+              <img class="hero-shoe-fallback"
+                   data-shoe-fallback
+                   src="/static/images/hero-shoe-frames/frame-001.webp"
+                   alt="Nike training shoe exploded layers view"
+                   width="1400" height="788"
+                   loading="eager"
+                   fetchpriority="high">
+
+              <!-- Smooth Canvas render surface -->
+              <canvas class="hero-shoe-canvas" data-shoe-canvas aria-hidden="true"></canvas>
+
+              <div class="hero-shoe-progress hero-shoe-progress--blueprint" aria-hidden="true">
+                <div class="hero-shoe-progress-fill" data-shoe-progress-fill></div>
+              </div>
+
+              <div class="hero-shoe-hint hero-shoe-hint--blueprint" data-shoe-hint aria-hidden="true">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg>
+                <span>SCROLL TO EXPLODE LAYERS &middot; DRAG TO ROTATE 3D</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% if new_arrivals %}
+<section class="section rotator-gallery-section" aria-labelledby="new-arrivals-heading" data-reveal>
+  <div class="rotator-ambient-glow" aria-hidden="true"></div>
+  <div class="section-inner rotator-section-inner">
+    <div class="grid-heading-row rotator-heading-row">
+      <div>
+        <div class="rotator-pill-badge">
+          <span class="rotator-pill-dot" aria-hidden="true"></span>
+          <span>Just In</span>
+        </div>
+        <h2 id="new-arrivals-heading" class="rotator-main-heading">{{ homepage_sections.new_arrivals.heading if homepage_sections.new_arrivals and homepage_sections.new_arrivals.heading else "New Arrivals" }}</h2>
+        {% if homepage_sections.new_arrivals and homepage_sections.new_arrivals.description %}
+        <p class="section-subcopy rotator-subcopy">{{ homepage_sections.new_arrivals.description }}</p>
+        {% endif %}
+      </div>
+      <a class="rotator-view-all-link" href="{{ (homepage_sections.new_arrivals.cta_url if homepage_sections.new_arrivals and homepage_sections.new_arrivals.cta_url else '/new-arrivals') }}">
+        <span>{{ homepage_sections.new_arrivals.cta_label if homepage_sections.new_arrivals and homepage_sections.new_arrivals.cta_label else "View All New Arrivals" }}</span>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <!-- Luxury 3D Sneaker Horizon Showcase -->
+    <div class="horizon-showcase" data-horizon-showcase>
+      <div class="horizon-stage-container">
+        <!-- Frame Navigation: Left Prev Button -->
+        <button type="button" class="horizon-nav-btn horizon-nav-prev" data-horizon-prev aria-label="Previous sneaker">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+
+        <!-- 3D Perspective Stage -->
+        <div class="horizon-viewport" data-horizon-viewport tabindex="0" role="region" aria-label="New arrivals sneaker showcase">
+          <div class="horizon-track" data-horizon-track>
+            {% for product in (new_arrivals_gallery if new_arrivals_gallery else new_arrivals) %}
+            <article class="horizon-card"
+                     data-horizon-card
+                     data-index="{{ loop.index0 }}"
+                     data-name="{{ product.name }}"
+                     data-brand="{{ product.brand }}"
+                     data-price="{{ product.price_display or 'Enquire for price' }}"
+                     data-url="/products/{{ product.slug }}"
+                     data-wa="{{ whatsapp_link(product.whatsapp_text) }}"
+                     data-availability="{{ product.availability_label }}"
+                     role="group"
+                     aria-label="{{ product.brand }} {{ product.name }}">
+              <div class="horizon-card-inner">
+                <!-- Sneaker Image Stage -->
+                <div class="horizon-card-media">
+                  <img class="horizon-card-img"
+                       src="{{ product.images[0].src }}"
+                       alt="{{ product.images[0].alt or product.name }}"
+                       loading="lazy"
+                       draggable="false">
+                  <div class="horizon-card-badges">
+                    <span class="badge badge-new">New Drop</span>
+                    {% if product.brand %}
+                    <span class="badge badge-brand">{{ product.brand }}</span>
+                    {% endif %}
+                  </div>
+                </div>
+
+                <!-- Card Content & Integrated Actions -->
+                <div class="horizon-card-body">
+                  <div class="horizon-card-header">
+                    <span class="horizon-card-brand">{{ product.brand }}</span>
+                    <h3 class="horizon-card-title">{{ product.name }}</h3>
+                  </div>
+
+                  <div class="horizon-card-footer">
+                    <div class="horizon-card-price-row">
+                      <div class="horizon-card-price-wrap">
+                        <span class="horizon-card-price-label">Price</span>
+                        <span class="horizon-card-price">{{ product.price_display or 'Enquire' }}</span>
+                      </div>
+                      <a href="/products/{{ product.slug }}"
+                         class="horizon-btn-link"
+                         aria-label="View details for {{ product.name }}">
+                        <span>View Details</span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                      </a>
+                    </div>
+                    <div class="horizon-card-actions">
+                      <a href="{{ whatsapp_link(product.whatsapp_text) }}"
+                         class="btn btn-primary btn-sm horizon-btn-wa"
+                         target="_blank"
+                         rel="noopener"
+                         aria-label="Enquire about {{ product.name }} on WhatsApp">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.78 14.15c-.24.68-1.2 1.25-1.84 1.34-.49.07-1.12.1-3.26-.78-2.73-1.13-4.5-3.9-4.64-4.08-.14-.19-1.11-1.48-1.11-2.82 0-1.34.7-2 1-2.28.24-.24.52-.3.7-.3.17 0 .35 0 .5.01.17.01.39-.06.61.47.23.55.78 1.9.85 2.04.07.14.12.3.02.49-.09.19-.14.3-.28.47-.14.17-.3.37-.43.5-.14.14-.29.29-.12.58.17.29.74 1.22 1.6 1.98 1.1 0.98 2.03 1.28 2.32 1.42.29.14.46.12.63-.07.17-.19.74-.86.94-1.15.2-.29.4-.24.68-.14.28.1 1.77.83 2.07.98.3.15.5.22.58.34.07.12.07.7-.17 1.38z"/></svg>
+                        <span>WhatsApp</span>
+                      </a>
+                      <a href="{{ instagram_dm_link() }}"
+                         class="btn btn-instagram btn-sm horizon-btn-ig"
+                         data-ig-enquire
+                         data-ig-text="{{ product.whatsapp_text }}"
+                         target="_blank"
+                         rel="noopener"
+                         aria-label="Enquire about {{ product.name }} on Instagram DM">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+                        <span>Instagram DM</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            {% endfor %}
+          </div>
+        </div>
+
+        <!-- Frame Navigation: Right Next Button -->
+        <button type="button" class="horizon-nav-btn horizon-nav-next" data-horizon-next aria-label="Next sneaker">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+
+      <!-- Ground Lighting & Shadow Shelf -->
+      <div class="horizon-ground-shelf" aria-hidden="true">
+        <div class="horizon-ground-shadow"></div>
+      </div>
+
+      <!-- Interactive Controls Bar: Dynamic Pagination & Counter -->
+      <div class="horizon-controls">
+        <div class="horizon-pagination" data-horizon-pagination role="tablist" aria-label="Sneaker slides">
+          <!-- Dots dynamically generated/synced by JS -->
+        </div>
+        <div class="horizon-counter">
+          <span class="horizon-counter-current" data-horizon-current>01</span>
+          <span class="horizon-counter-sep">/</span>
+          <span class="horizon-counter-total" data-horizon-total>08</span>
+        </div>
+      </div>
+
+      <!-- Subtle Drag Hint -->
+      <div class="horizon-drag-hint" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16l-4-4 4-4M17 8l4 4-4 4M3 12h18"/></svg>
+        <span>Drag, swipe, or click to explore arrivals</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endif %}
+
+{% if featured_products %}
+<section class="section grid-section section-tinted" aria-labelledby="featured-heading" data-reveal>
+  <div class="section-inner">
+    <div class="grid-heading-row">
+      <div>
+        <p class="section-eyebrow">Handpicked</p>
+        <h2 id="featured-heading">{{ homepage_sections.featured.heading if homepage_sections.featured and homepage_sections.featured.heading else "Featured Products" }}</h2>
+        {% if homepage_sections.featured and homepage_sections.featured.description %}
+        <p class="section-subcopy">{{ homepage_sections.featured.description }}</p>
+        {% endif %}
+      </div>
+      {% if homepage_sections.featured and homepage_sections.featured.cta_url %}
+      <a class="text-link" href="{{ homepage_sections.featured.cta_url }}">{{ homepage_sections.featured.cta_label or "Shop Featured →" }}</a>
+      {% endif %}
+    </div>
+    <div class="editorial-grid">
+      {% for product in featured_products %}
+        {% include "_product_card.html" %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="section category-showcase-section" aria-labelledby="categories-heading" data-reveal>
+  <div class="section-inner">
+    <div class="category-heading-row">
+      <div>
+        <p class="section-eyebrow">Shop By</p>
+        <h2 id="categories-heading">Category</h2>
+      </div>
+      <p class="category-heading-hint">Interactive 3D collections &middot; Hover or click to explore</p>
+    </div>
+
+    <div class="category-stage-grid">
+      {% for cat in category_showcase if cat.count > 0 %}
+      <a class="category-stage-card"
+         href="/category/{{ cat.slug }}"
+         data-depth-card
+         data-max-rotation="10"
+         data-max-translation="6"
+         aria-label="Shop {{ cat.name }} collection ({{ cat.count }} items)">
+        <div class="depth-card-inner category-stage-card-inner">
+          <div class="category-stage-card-media">
+            {% if cat.image %}
+            <img src="{{ cat.image.src }}" alt="{{ cat.image.alt }}" loading="lazy" width="480" height="600" class="category-stage-card-img">
+            {% endif %}
+            <div class="category-stage-card-scrim" aria-hidden="true"></div>
+            <div class="depth-card-glare" aria-hidden="true"></div>
+          </div>
+
+          <!-- Top Meta Floating Pills -->
+          <div class="category-stage-card-top">
+            <span class="category-num-tag">{{ cat.num }}</span>
+            <span class="category-stock-badge">
+              <span class="stock-pulse-dot"></span>
+              {{ cat.badge }}
+            </span>
+          </div>
+
+          <!-- Bottom Information Content -->
+          <div class="category-stage-card-content">
+            <h3 class="category-stage-card-title">{{ cat.name }}</h3>
+            <p class="category-stage-card-tagline">{{ cat.tagline }}</p>
+            <div class="category-stage-card-action">
+              <span class="category-explore-btn">
+                <span>Explore {{ cat.name }}</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+
+{% if new_arrivals %}
+<section class="section new-releases-section section-tinted" aria-labelledby="new-releases-heading" data-reveal>
+  <div class="section-inner">
+    <p class="section-eyebrow">Fresh On The Shelf</p>
+    <h2 id="new-releases-heading">New Releases</h2>
+    <div class="release-rail">
+      <a class="release-feature" href="/products/{{ new_arrivals[0].slug }}">
+        <div class="release-feature-media">
+          <span class="release-feature-badge">
+            <span class="release-pulse-dot"></span>
+            Featured Drop
+          </span>
+          <img src="{{ new_arrivals[0].images[0].src }}" alt="{{ new_arrivals[0].images[0].alt }}" loading="lazy" width="640" height="640">
+        </div>
+        <div class="release-feature-info">
+          <div class="release-feature-top">
+            <span class="release-feature-brand">{{ new_arrivals[0].brand }}</span>
+            <span class="release-feature-condition">Deadstock 10/10</span>
+          </div>
+          <h3 class="release-feature-title">{{ new_arrivals[0].name }}</h3>
+          <p class="release-feature-desc">{{ new_arrivals[0].description[:140] }}&hellip;</p>
+          <div class="release-feature-footer">
+            <div class="release-feature-price-wrap">
+              <span class="release-feature-price-label">Price</span>
+              <span class="release-feature-price">{{ new_arrivals[0].price_display or 'Enquire for price' }}</span>
+            </div>
+            <span class="release-feature-btn">
+              <span>View Drop</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </span>
+          </div>
+        </div>
+      </a>
+      {% if new_arrivals|length > 1 %}
+      <div class="release-rail-list">
+        <div class="release-rail-list-head">
+          <span class="release-rail-list-title">More New Arrivals</span>
+          <a href="/products?sort=newest" class="release-rail-view-all">Browse all &rarr;</a>
+        </div>
+        {% for product in new_arrivals[1:6] %}
+        <a class="release-rail-item" href="/products/{{ product.slug }}">
+          <div class="release-rail-thumb">
+            <img src="{{ product.images[0].src }}" alt="{{ product.images[0].alt }}" loading="lazy" width="140" height="140">
+          </div>
+          <span class="release-rail-info">
+            <span class="release-rail-brand">{{ product.brand }}</span>
+            <span class="release-rail-name">{{ product.name }}</span>
+            <span class="release-rail-price">{{ product.price_display or 'Enquire for price' }}</span>
+          </span>
+          <span class="release-rail-arrow" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </span>
+        </a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if top_picks %}
+<section class="section grid-section" aria-labelledby="top-picks-heading" data-reveal>
+  <div class="section-inner">
+    <div class="grid-heading-row">
+      <div>
+        <p class="section-eyebrow">Curated By Us</p>
+        <h2 id="top-picks-heading">{{ homepage_sections.top_picks.heading if homepage_sections.top_picks and homepage_sections.top_picks.heading else "Top Picks" }}</h2>
+        <p class="section-subcopy">{{ homepage_sections.top_picks.description if homepage_sections.top_picks and homepage_sections.top_picks.description else "Hand-picked from what's currently in store — no fillers." }}</p>
+      </div>
+      <a class="text-link" href="{{ homepage_sections.top_picks.cta_url if homepage_sections.top_picks and homepage_sections.top_picks.cta_url else '/products' }}">{{ homepage_sections.top_picks.cta_label if homepage_sections.top_picks and homepage_sections.top_picks.cta_label else "Shop All Footwear →" }}</a>
+    </div>
+    <div class="product-grid product-grid--dense">
+      {% for product in top_picks %}
+        {% include "_product_card.html" %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="section size-run-section section-tinted" aria-labelledby="size-run-heading" data-reveal>
+  <div class="section-inner size-run-inner">
+    <div class="size-run-copy">
+      <p class="section-eyebrow">Find Your Fit</p>
+      <h2 id="size-run-heading">Size Run</h2>
+      {% if all_sizes %}
+      <p>Pick your size and we'll show you what's currently in store.</p>
+      {% else %}
+      <p>We're building size-by-size availability into the site. Until then, tell us your size on WhatsApp and we'll confirm what's on the shelf.</p>
+      {% endif %}
+      <a class="btn btn-primary" href="{{ whatsapp_link('Hi Soleslay, I am looking for a specific size. Could you help me check availability?') }}" target="_blank" rel="noopener">Ask about your size</a>
+    </div>
+    <div class="size-run-picker" role="group" aria-label="Shoe size" {% if not all_sizes %}aria-disabled="true"{% endif %}>
+      {% if all_sizes %}
+        {% for size in all_sizes %}
+        <button type="button" class="size-chip" data-size="{{ size }}">{{ size }}</button>
+        {% endfor %}
+      {% else %}
+        {% for size in ["6", "7", "8", "9", "10", "11"] %}
+        <button type="button" class="size-chip is-inactive" disabled aria-disabled="true" title="Size filtering coming soon">{{ size }}</button>
+        {% endfor %}
+        <p class="size-run-note">Sizes shown are for reference only — availability by size isn't tracked online yet.</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% if sneaker_feature %}
+<section class="section sneaker-editorial" aria-labelledby="sneaker-feature-heading" data-reveal>
+  <div class="section-inner sneaker-editorial-grid">
+    <div class="sneaker-editorial-visual">
+      <img src="{{ sneaker_feature[0].images[0].src }}" alt="{{ sneaker_feature[0].images[0].alt }}" loading="lazy" width="700" height="700">
+    </div>
+    <div class="sneaker-editorial-copy">
+      <p class="section-eyebrow">The Sneaker Wall</p>
+      <h2 id="sneaker-feature-heading">{{ homepage_sections.sneakers_feature.heading if homepage_sections.sneakers_feature and homepage_sections.sneakers_feature.heading else "Sneakers, Done Right" }}</h2>
+      <p>{{ homepage_sections.sneakers_feature.description if homepage_sections.sneakers_feature and homepage_sections.sneakers_feature.description else "From Onitsuka Tiger's retro runners to Jordan and Nike classics — Soleslay's sneaker rack is where most of our regulars start looking." }}</p>
+      <a class="btn btn-primary" href="{{ homepage_sections.sneakers_feature.cta_url if homepage_sections.sneakers_feature and homepage_sections.sneakers_feature.cta_url else '/category/sneakers' }}">{{ homepage_sections.sneakers_feature.cta_label if homepage_sections.sneakers_feature and homepage_sections.sneakers_feature.cta_label else "Shop Sneakers" }}</a>
+      <div class="sneaker-editorial-support">
+        {% for product in sneaker_feature[1:5] %}
+        <a class="sneaker-support-card" href="/products/{{ product.slug }}">
+          <img src="{{ product.images[0].src }}" alt="{{ product.images[0].alt }}" loading="lazy" width="140" height="140">
+          <span>{{ product.brand }}</span>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="section brand-showcase" aria-labelledby="brands-heading" data-reveal>
+  <div class="section-inner brand-showcase-header">
+    <p class="section-eyebrow section-eyebrow--dark">Brands We Stock</p>
+    <h2 id="brands-heading">Brands</h2>
+  </div>
+  <div class="brand-marquee-wrap" role="region" aria-label="Brands ticker">
+    <div class="brand-marquee-track">
+      <div class="brand-marquee-group">
+        {% for b in brands %}
+        <a class="brand-marquee-item brand-marquee-item--{{ b|lower|replace(' ', '-') }}" href="/products?brand={{ b|urlencode }}" title="Shop {{ b }}" aria-label="Shop {{ b }}">
+          <img src="/static/images/brands/{{ b|lower|replace(' ', '-') }}.svg" alt="{{ b }}" class="brand-marquee-logo" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block'">
+          <span class="brand-marquee-text" style="display:none; font-weight:700; letter-spacing:0.05em; text-transform:uppercase;">{{ b }}</span>
+        </a>
+        {% endfor %}
+        {% for b in brands %}
+        <a class="brand-marquee-item brand-marquee-item--{{ b|lower|replace(' ', '-') }}" href="/products?brand={{ b|urlencode }}" title="Shop {{ b }}" aria-label="Shop {{ b }}">
+          <img src="/static/images/brands/{{ b|lower|replace(' ', '-') }}.svg" alt="{{ b }}" class="brand-marquee-logo" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block'">
+          <span class="brand-marquee-text" style="display:none; font-weight:700; letter-spacing:0.05em; text-transform:uppercase;">{{ b }}</span>
+        </a>
+        {% endfor %}
+      </div>
+      <div class="brand-marquee-group" aria-hidden="true">
+        {% for b in brands %}
+        <a class="brand-marquee-item brand-marquee-item--{{ b|lower|replace(' ', '-') }}" href="/products?brand={{ b|urlencode }}" tabindex="-1" title="Shop {{ b }}" aria-label="Shop {{ b }}">
+          <img src="/static/images/brands/{{ b|lower|replace(' ', '-') }}.svg" alt="" class="brand-marquee-logo" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block'">
+          <span class="brand-marquee-text" style="display:none; font-weight:700; letter-spacing:0.05em; text-transform:uppercase;">{{ b }}</span>
+        </a>
+        {% endfor %}
+        {% for b in brands %}
+        <a class="brand-marquee-item brand-marquee-item--{{ b|lower|replace(' ', '-') }}" href="/products?brand={{ b|urlencode }}" tabindex="-1" title="Shop {{ b }}" aria-label="Shop {{ b }}">
+          <img src="/static/images/brands/{{ b|lower|replace(' ', '-') }}.svg" alt="" class="brand-marquee-logo" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block'">
+          <span class="brand-marquee-text" style="display:none; font-weight:700; letter-spacing:0.05em; text-transform:uppercase;">{{ b }}</span>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section store-story-section" aria-labelledby="store-story-heading" data-reveal>
+  <div class="section-inner store-story-grid">
+    <div class="store-story-copy">
+      <p class="section-eyebrow">Our Story</p>
+      <h2 id="store-story-heading">About {{ business.name }}</h2>
+      <p class="store-story-lede">{{ business.description }}</p>
+      <p>{{ business.tagline }} — every pair on our shelves is picked to be worn, not just displayed. Walk in, try it on, and if it's not quite right, we'll help you find what is.</p>
+      <div class="store-story-facts">
+        <div class="store-story-fact">
+          <span>Guduvanchery, Chennai</span>
+          <small>Walk-in store</small>
+        </div>
+        <div class="store-story-fact">
+          <span>7+ global brands</span>
+          <small>Nike · Adidas · Woodland</small>
+        </div>
+        <div class="store-story-fact">
+          <span>Try before you buy</span>
+          <small>In-store fitting</small>
+        </div>
+      </div>
+      <a class="btn btn-ghost" href="/about">
+        Read our full story
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <div class="store-story-media">
+      <div class="store-media-video-wrap">
+        <span class="store-media-tag">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          Store walkthrough
+        </span>
+        <video
+          class="store-media-video"
+          poster="/static/images/hero-poster.jpg?v=2"
+          loop
+          playsinline
+          preload="metadata"
+          data-store-video
+          aria-label="A look inside the {{ business.name }} store">
+          <source src="/static/video/soleslay-store-walkthrough.mp4?v=2" type="video/mp4">
+        </video>
+        <button type="button" class="store-media-sound" data-video-sound-toggle aria-label="Toggle sound">
+          <svg class="icon-sound-on" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+          </svg>
+          <svg class="icon-sound-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+          </svg>
+          <span class="store-media-sound-text">Sound</span>
+        </button>
+        <button type="button" class="store-media-play" data-video-toggle aria-label="Play store video">
+          <span class="store-media-play-ring"></span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+      </div>
+      <div class="store-story-badge">
+        <span class="store-story-badge-num">100+</span>
+        <span class="store-story-badge-label">Styles on the wall</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section final-cta-section" aria-labelledby="final-cta-heading" data-reveal>
+  <div class="section-inner final-cta-inner">
+    <h2 id="final-cta-heading">Can't decide? Just ask.</h2>
+    <p>Message us your size, budget or the look you're after — we'll point you to what's actually on the shelf.</p>
+    <a class="btn btn-primary btn-lg" href="{{ whatsapp_link('Hi Soleslay, I would like some help finding the right pair.') }}" target="_blank" rel="noopener">Chat with Soleslay on WhatsApp</a>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="/static/js/hero-shoe-scroll.js" defer></script>
+{% endblock %}

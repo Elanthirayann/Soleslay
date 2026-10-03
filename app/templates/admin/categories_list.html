@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Categories{% endblock %}
+{% block heading %}Categories{% endblock %}
+{% block actions %}<a class="btn btn-primary" href="/admin/categories/new">+ Add Category</a>{% endblock %}
+{% block content %}
+
+{% if categories %}
+<div class="card" style="padding:0;">
+<div class="table-scroll">
+<table>
+  <thead><tr><th></th><th>Name</th><th>Slug</th><th>Products</th><th>Status</th><th></th></tr></thead>
+  <tbody>
+    {% for c in categories %}
+    <tr>
+      <td>{% if c.image %}<img class="table-thumb" src="{{ c.image }}" alt="">{% else %}<div class="table-thumb"></div>{% endif %}</td>
+      <td><a href="/admin/categories/{{ c.id }}/edit">{{ c.name }}</a></td>
+      <td>{{ c.slug }}</td>
+      <td>{{ counts[c.id] }}</td>
+      <td>{% if c.active %}<span class="badge badge-published">Active</span>{% else %}<span class="badge badge-draft">Inactive</span>{% endif %}</td>
+      <td>
+        <a href="/admin/categories/{{ c.id }}/edit" class="btn btn-sm">Edit</a>
+        <a href="/admin/categories/{{ c.id }}/delete" class="btn btn-sm btn-danger">Delete</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+</div>
+{% else %}
+<div class="empty-state">No categories yet. <a href="/admin/categories/new">Add one</a>.</div>
+{% endif %}
+
+{% endblock %}

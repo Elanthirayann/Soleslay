@@ -1,0 +1,62 @@
+name: Keep Render Service Awake
+
+on:
+  schedule:
+    # Runs every 14 minutes (Render free tier spins down after 15 minutes of inactivity)
+    - cron: '*/14 * * * *'
+  # Allows manual execution anytime via the Actions tab in GitHub
+  workflow_dispatch:
+    inputs:
+      target_url:
+        description: 'Optional custom URL to ping (overrides secret/variable if provided)'
+        required: false
+        default: ''
+
+jobs:
+  keep-awake:
+    name: Wakeup Ping to Render
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Service Endpoint
+        shell: bash
+        env:
+          INPUT_URL: ${{ github.event.inputs.target_url }}
+          SECRET_URL: ${{ secrets.RENDER_APP_URL }}
+          VAR_URL: ${{ vars.RENDER_APP_URL }}
+        run: |
+          # Priority: Manual input -> Secret -> Variable
+          URL="${INPUT_URL:-${SECRET_URL:-${VAR_URL}}}"
+
+          # Strip trailing slash if present
+          URL="${URL%/}"
+
+          if [ -z "$URL" ]; then
+            echo "::error::No Render URL found!"
+            echo ""
+            echo "How to fix:"
+            echo "1. Go to your GitHub repository -> Settings -> Secrets and variables -> Actions"
+            echo "2. Add a Repository Variable or Secret named RENDER_APP_URL"
+            echo "   Value: https://your-app-name.onrender.com"
+            echo "3. Re-run this workflow or wait for the next 14-minute cron trigger."
+            exit 1
+          fi
+
+          echo "Target Render URL: $URL"
+          echo "Pinging health endpoint: $URL/health at $(date -u)"
+
+          # Ping the health check endpoint with max 45s timeout to allow waking up cold starts
+          RESPONSE=$(curl -s -w "\n%{http_code} %{time_total}s" -m 45 "$URL/health" || curl -s -w "\n%{http_code} %{time_total}s" -m 45 "$URL/")
+
+          HTTP_CODE=$(echo "$RESPONSE" | tail -n1 | awk '{print $1}')
+          TIME_TOTAL=$(echo "$RESPONSE" | tail -n1 | awk '{print $2}')
+          BODY=$(echo "$RESPONSE" | sed '$d')
+
+          echo "HTTP Status Code: $HTTP_CODE"
+          echo "Response Time: $TIME_TOTAL"
+          echo "Response Body: $BODY"
+
+          if [ "$HTTP_CODE" -ge 200 ] && [ "$HTTP_CODE" -lt 400 ]; then
+            echo "SUCCESS: Render instance is awake, active, and healthy!"
+          else
+            echo "::warning::Received non-2xx status code ($HTTP_CODE). Service might be rebooting."
+          fi

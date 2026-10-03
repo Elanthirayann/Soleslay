@@ -1,0 +1,22 @@
+{% macro render_mobile_accordion(menu_id, label) %}
+<div class="mobile-accordion">
+  <button type="button" class="mobile-accordion-trigger" aria-expanded="false" aria-controls="mobile-panel-{{ menu_id }}">
+    {{ label }}
+    <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+  </button>
+  <div class="mobile-accordion-panel" id="mobile-panel-{{ menu_id }}" aria-hidden="true">
+    <p class="mobile-accordion-subhead">Footwear</p>
+    {% for slug, name in categories.items() if slug != 'belts-accessories' %}
+    <a href="/category/{{ slug }}">{{ name }}</a>
+    {% endfor %}
+    <p class="mobile-accordion-subhead">Accessories</p>
+    {% for slug, name in categories.items() if slug == 'belts-accessories' %}
+    <a href="/category/{{ slug }}">{{ name }}</a>
+    {% endfor %}
+    <p class="mobile-accordion-subhead">Featured</p>
+    <a href="/new-arrivals">New Arrivals</a>
+    <a href="/#featured-heading">Featured Picks</a>
+    <a href="/products">All Footwear</a>
+  </div>
+</div>
+{% endmacro %}

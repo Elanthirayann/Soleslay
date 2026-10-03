@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}{{ section.label }}{% endblock %}
+{% block heading %}{{ section.label }}{% endblock %}
+{% block actions %}<a class="btn" href="/admin/homepage">← Back to homepage sections</a>{% endblock %}
+{% block content %}
+
+<form method="post" action="/admin/homepage/{{ section.key }}/edit">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+
+  <div class="card">
+    <label class="checkbox-row"><input type="checkbox" name="enabled" {{ "checked" if section.enabled else "" }}> Enabled on the homepage</label>
+    <div class="form-grid" style="margin-top:16px;">
+      <div class="form-group">
+        <label for="heading">Heading</label>
+        <input type="text" id="heading" name="heading" value="{{ section.heading or '' }}">
+      </div>
+      <div class="form-group full">
+        <label for="description">Description</label>
+        <textarea id="description" name="description">{{ section.description or '' }}</textarea>
+      </div>
+      <div class="form-group">
+        <label for="cta_label">CTA label</label>
+        <input type="text" id="cta_label" name="cta_label" value="{{ section.cta_label or '' }}" placeholder="e.g. Shop All">
+      </div>
+      <div class="form-group">
+        <label for="cta_url">CTA URL</label>
+        <input type="text" id="cta_url" name="cta_url" value="{{ section.cta_url or '' }}" placeholder="e.g. /products">
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Products in this section</h2>
+    <p class="hint">Tick the products to include, and set an order number for each (lower shows first). Only published products are listed.</p>
+    {% if products %}
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Include</th><th>Product</th><th>Order</th></tr></thead>
+      <tbody>
+        {% for p in products %}
+        <tr>
+          <td><input type="checkbox" name="include_{{ p.id }}" {{ "checked" if p.id in selected_ids else "" }}></td>
+          <td>{{ p.name }}</td>
+          <td><input type="number" name="order_{{ p.id }}" value="{{ selected_ids.get(p.id, 0) }}" style="width:80px;"></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    </div>
+    {% else %}
+    <div class="empty-state">No published products yet.</div>
+    {% endif %}
+  </div>
+
+  <button type="submit" class="btn btn-primary">Save section</button>
+</form>
+
+{% endblock %}

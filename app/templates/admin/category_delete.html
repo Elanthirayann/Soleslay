@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Delete Category{% endblock %}
+{% block heading %}Delete “{{ category.name }}”{% endblock %}
+{% block actions %}<a class="btn" href="/admin/categories">← Back to categories</a>{% endblock %}
+{% block content %}
+
+<div class="card confirm-box">
+  {% if product_count > 0 %}
+  <p>{{ product_count }} product(s) are currently in this category. Choose a category to move them to before deleting — nothing will be deleted from the catalog, they'll just be reassigned.</p>
+  <form method="post" action="/admin/categories/{{ category.id }}/delete">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <div class="form-group">
+      <label for="reassign_to">Move {{ product_count }} product(s) to</label>
+      <select id="reassign_to" name="reassign_to" required>
+        <option value="">— Choose a category —</option>
+        {% for c in other_categories %}
+        <option value="{{ c.id }}">{{ c.name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <button type="submit" class="btn btn-danger" data-confirm-skip>Reassign products and delete “{{ category.name }}”</button>
+    <a class="btn" href="/admin/categories">Cancel</a>
+  </form>
+  {% else %}
+  <p>This category has no products in it. Deleting it is safe.</p>
+  <form method="post" action="/admin/categories/{{ category.id }}/delete" data-confirm="Delete “{{ category.name }}” permanently?">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <button type="submit" class="btn btn-danger">Delete “{{ category.name }}”</button>
+    <a class="btn" href="/admin/categories">Cancel</a>
+  </form>
+  {% endif %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}{{ "Edit Brand" if brand else "Add Brand" }}{% endblock %}
+{% block heading %}{{ "Edit " + brand.name if brand else "Add Brand" }}{% endblock %}
+{% block actions %}<a class="btn" href="/admin/brands">← Back to brands</a>{% endblock %}
+{% block content %}
+
+<form method="post" action="{{ '/admin/brands/' ~ brand.id ~ '/edit' if brand else '/admin/brands/new' }}" enctype="multipart/form-data">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+  <div class="card">
+    <div class="form-grid">
+      <div class="form-group">
+        <label for="name_src">Name *</label>
+        <input type="text" id="name_src" name="name" required value="{{ brand.name if brand else '' }}" data-slug-source="slug_target">
+      </div>
+      <div class="form-group">
+        <label for="slug_target">Slug</label>
+        <input type="text" id="slug_target" name="slug" value="{{ brand.slug if brand else '' }}">
+      </div>
+      <div class="form-group">
+        <label for="sort_order">Sort order</label>
+        <input type="number" id="sort_order" name="sort_order" value="{{ brand.sort_order if brand else 0 }}">
+      </div>
+      <div class="form-group">
+        <label class="checkbox-row"><input type="checkbox" name="active" {{ "checked" if (not brand) or brand.active else "" }}> Active</label>
+      </div>
+      <div class="form-group full">
+        <label for="description">Description</label>
+        <textarea id="description" name="description">{{ brand.description if brand and brand.description else '' }}</textarea>
+      </div>
+      <div class="form-group full">
+        <label for="image_file">Brand logo / image</label>
+        {% if brand and brand.image %}<img class="table-thumb" style="width:80px;height:80px;margin-bottom:8px;" src="{{ brand.image }}" alt="">{% endif %}
+        <input type="file" id="image_file" name="image_file" accept="image/jpeg,image/png,image/webp">
+      </div>
+      <div class="form-group full">
+        <label for="seo_title">SEO title</label>
+        <input type="text" id="seo_title" name="seo_title" value="{{ brand.seo_title if brand and brand.seo_title else '' }}">
+      </div>
+      <div class="form-group full">
+        <label for="seo_description">SEO description</label>
+        <textarea id="seo_description" name="seo_description">{{ brand.seo_description if brand and brand.seo_description else '' }}</textarea>
+      </div>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">{{ "Save changes" if brand else "Create brand" }}</button>
+  <a class="btn" href="/admin/brands">Cancel</a>
+</form>
+
+{% endblock %}

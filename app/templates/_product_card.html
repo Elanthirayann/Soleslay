@@ -1,0 +1,84 @@
+<article class="product-card vault-card"
+  data-product-card
+  data-depth-card
+  data-max-rotation="7"
+  data-max-translation="4"
+  data-spotlight-card
+  data-category="{{ product.category }}"
+  data-brand="{{ product.brand }}"
+  data-new="{{ '1' if product.is_new else '0' }}"
+  data-featured="{{ '1' if product.is_featured else '0' }}"
+  data-price="{{ product.price if product.price is not none else '' }}"
+  data-name="{{ product.name }}"
+  data-availability-label="{{ product.availability_label }}"
+  data-detail-url="/products/{{ product.slug }}"
+  data-wa-link="{{ whatsapp_link(product.whatsapp_text) }}"
+  data-ig-link="{{ instagram_dm_link() }}"
+  data-ig-text="{{ product.whatsapp_text }}"
+  {% if product.has_real_sizes %}data-sizes='{{ product.sizes_json }}'{% endif %}>
+
+  <div class="vault-card-inner depth-card-inner">
+    <!-- 1. Media Stage (Clean, Prominent Product Image) -->
+    <div class="vault-stage product-card-media-wrap" data-skeleton-wrap data-zoom-stage>
+      <!-- Optional single subtle badge -->
+      {% if product.is_new %}
+        <span class="vault-card-pill vault-card-pill--new">New Arrival</span>
+      {% elif product.is_featured %}
+        <span class="vault-card-pill vault-card-pill--featured">Best Seller</span>
+      {% elif product.availability == 'limited' %}
+        <span class="vault-card-pill vault-card-pill--limited">Limited</span>
+      {% endif %}
+
+      <span class="img-skeleton" aria-hidden="true"></span>
+      <a href="/products/{{ product.slug }}" class="vault-stage-link">
+        <div class="vault-pedestal" aria-hidden="true">
+          <div class="vault-pedestal-surface"></div>
+        </div>
+
+        <img
+          class="vault-shoe-img vault-shoe-img--primary product-card-img--primary"
+          src="{{ product.images[0].src }}"
+          alt="{{ product.images[0].alt }}"
+          loading="lazy"
+          style="view-transition-name: product-img-{{ product.slug }};"
+          width="600" height="600">
+      </a>
+
+      <!-- Quickview Trigger in Top-Right Corner of Stage -->
+      <button type="button" class="quickview-trigger vault-quickview-trigger" data-magnetic data-quickview-trigger aria-label="Quick view {{ product.name }}">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+      </button>
+    </div>
+
+    <!-- 2. Clean Product Information Block -->
+    <div class="vault-info">
+      <div class="vault-brand-line">
+        <span class="vault-brand-label">{{ product.brand }}</span>
+        <span class="vault-stock-indicator {{ 'is-soldout' if product.availability == 'out_of_stock' else 'is-instock' }}">
+          <span class="vault-stock-dot"></span>
+          {{ 'Sold Out' if product.availability == 'out_of_stock' else 'In Stock' }}
+        </span>
+      </div>
+
+      <h3 class="vault-title">
+        <a href="/products/{{ product.slug }}" title="{{ product.name }}">{{ product.name }}</a>
+      </h3>
+
+      <div class="vault-price-row">
+        {% if product.price_display %}
+          <span class="vault-price-main">{{ product.price_display }}</span>
+        {% else %}
+          <span class="vault-price-main vault-price-main--enquire">Price on Request</span>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- 3. Friendly Action Button: Direct WhatsApp Enquiry -->
+    <div class="vault-actions">
+      <a class="vault-btn vault-btn--stealth" data-magnetic href="{{ whatsapp_link(product.whatsapp_text) }}" target="_blank" rel="noopener" title="Enquire on WhatsApp for {{ product.name }}">
+        <svg class="vault-btn-icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.78 14.15c-.24.68-1.2 1.25-1.84 1.34-.49.07-1.12.1-3.26-.78-2.73-1.13-4.5-3.9-4.64-4.08-.14-.19-1.11-1.48-1.11-2.82 0-1.34.7-2 1-2.28.24-.24.52-.3.7-.3.17 0 .35 0 .5.01.17.01.39-.06.61.47.23.55.78 1.9.85 2.04.07.14.12.3.02.49-.09.19-.14.3-.28.47-.14.17-.3.37-.43.5-.14.14-.29.29-.12.58.17.29.74 1.22 1.6 1.98 1.1 0.98 2.03 1.28 2.32 1.42.29.14.46.12.63-.07.17-.19.74-.86.94-1.15.2-.29.4-.24.68-.14.28.1 1.77.83 2.07.98.3.15.5.22.58.34.07.12.07.7-.17 1.38z"/></svg>
+        <span class="vault-btn-label">Enquire on WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</article>

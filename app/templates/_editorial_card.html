@@ -1,0 +1,28 @@
+<article class="editorial-card">
+  <a href="/products/{{ product.slug }}" class="editorial-card-media" data-skeleton-wrap>
+    <span class="img-skeleton" aria-hidden="true"></span>
+    <img
+      src="{{ product.images[0].src }}"
+      alt="{{ product.images[0].alt }}"
+      loading="lazy"
+      style="view-transition-name: product-img-{{ product.slug }};"
+      width="500" height="500">
+    {% if product.is_new or product.is_featured or not product.in_stock %}
+    <span class="product-badges">
+      {% if product.is_new %}<span class="badge badge-new">New Arrival</span>{% endif %}
+      {% if product.is_featured %}<span class="badge badge-featured">Featured</span>{% endif %}
+      {% if not product.in_stock %}<span class="badge badge-availability">Sold Out</span>{% endif %}
+    </span>
+    {% endif %}
+  </a>
+  <p class="editorial-brand">{{ product.brand }}</p>
+  <h3 class="editorial-name"><a href="/products/{{ product.slug }}">{{ product.name }}</a></h3>
+  <div class="editorial-meta">
+    {% if product.price_display %}
+    <span class="editorial-price">{{ product.price_display }}</span>
+    {% else %}
+    <span class="editorial-price editorial-price--enquire">Enquire</span>
+    {% endif %}
+    <a class="editorial-whatsapp" data-magnetic href="{{ whatsapp_link(product.whatsapp_text) }}" target="_blank" rel="noopener">Enquire Now</a>
+  </div>
+</article>

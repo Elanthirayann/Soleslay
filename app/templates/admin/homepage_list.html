@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Homepage{% endblock %}
+{% block heading %}Homepage Sections{% endblock %}
+{% block content %}
+
+<div class="card" style="padding:0;">
+<div class="table-scroll">
+<table>
+  <thead><tr><th>Section</th><th>Status</th><th>Heading</th><th></th></tr></thead>
+  <tbody>
+    {% for s in sections %}
+    <tr>
+      <td>{{ s.label }}</td>
+      <td>{% if s.enabled %}<span class="badge badge-published">Enabled</span>{% else %}<span class="badge badge-draft">Disabled</span>{% endif %}</td>
+      <td>{{ s.heading or "—" }}</td>
+      <td><a href="/admin/homepage/{{ s.key }}/edit" class="btn btn-sm">Edit</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+</div>
+
+<div class="card">
+  <h2>Hero carousel</h2>
+  <p class="hint">The homepage hero is managed separately since each slide links to a live product.</p>
+  <a class="btn" href="/admin/hero">Manage Hero →</a>
+</div>
+
+{% endblock %}

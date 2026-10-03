@@ -1,0 +1,1022 @@
+[
+  {
+    "slug": "woodland-sandal-tan-black-adventure",
+    "name": "Woodland Adventure Sandal",
+    "brand": "Woodland",
+    "category": "sandals",
+    "description": "A rugged tan-and-black sport sandal from Woodland with triple hook-and-loop straps, a cushioned tan footbed and a deep-lugged outsole built for all-day wear around Guduvanchery.",
+    "price": 3395.0,
+    "sku": null,
+    "images": [
+      {
+        "src": "/static/images/products/woodland-sandal-tan-3395.png",
+        "alt": "Woodland tan and black sport sandal pair"
+      },
+      {
+        "src": "/static/images/products/woodland-sandal-tan-3395-detail-upper.png",
+        "alt": "Woodland Adventure Sandal - Upper & Stitch Detail"
+      },
+      {
+        "src": "/static/images/products/woodland-sandal-tan-3395-detail-heel.png",
+        "alt": "Woodland Adventure Sandal - Heel & Texture Angle"
+      },
+      {
+        "src": "/static/images/products/woodland-sandal-tan-3395-detail-sole.png",
+        "alt": "Woodland Adventure Sandal - Outsole & Profile View"
+      }
+    ],
+    "seo_title": "Woodland Adventure Sandal - Tan & Black | Soleslay Guduvanchery",
+    "seo_description": "Shop the Woodland Adventure Sandal in tan and black at Soleslay, Guduvanchery. Sport sandals with grip outsole. WhatsApp us for size availability.",
+    "in_stock": true,
+    "is_new": false,
+    "is_featured": true,
+    "sizes": [
+      {
+        "size": "UK 6",
+        "available": true
+      },
+      {
+        "size": "UK 7",
+        "available": true
+      },
+      {
+        "size": "UK 8",
+        "available": true
+      },
+      {
+        "size": "UK 9",
+        "available": true
+      },
+      {
+        "size": "UK 10",
+        "available": true
+      },
+      {
+        "size": "UK 11",
+        "available": true
+      }
+    ]
+  },
+  {
+    "slug": "air-jordan-1-low-craft-inside-out",
+    "name": "Air Jordan 1 Low Craft \"Inside Out\"",
+    "brand": "Jordan",
+    "category": "sneakers",
+    "description": "Air Jordan 1 Low in a deconstructed \"inside out\" craft finish, mixing off-white canvas, grey suede and reversed panel stitching for a raw, unfinished look.",
+    "price": null,
+    "sku": null,
+    "images": [
+      {
+        "src": "/static/images/products/jordan-1-low-craft.jpg",
+        "alt": "Air Jordan 1 Low Craft sneaker pair in off-white and grey, held in hand"
+      },
+      {
+        "src": "/static/images/products/jordan-1-low-craft-detail-upper.jpg",
+        "alt": "Air Jordan 1 Low Craft \"Inside Out\" - Upper & Stitch Detail"
+      },
+      {
+        "src": "/static/images/products/jordan-1-low-craft-detail-heel.jpg",
+        "alt": "Air Jordan 1 Low Craft \"Inside Out\" - Heel & Texture Angle"
+      },
+      {
+        "src": "/static/images/products/jordan-1-low-craft-detail-sole.jpg",
+        "alt": "Air Jordan 1 Low Craft \"Inside Out\" - Outsole & Profile View"
+      }
+    ],
+    "seo_title": "Air Jordan 1 Low Craft Inside Out | Soleslay Guduvanchery",
+    "seo_description": "Air Jordan 1 Low Craft in off-white and grey, available at Soleslay, Guduvanchery. WhatsApp us to check current stock and sizes.",
+    "in_stock": true,
+    "is_new": true,
+    "is_featured": true,
+    "sizes": [
+      {
+        "size": "UK 6",
+        "available": true
+      },
+      {
+        "size": "UK 7",
+        "available": true
+      },
+      {
+        "size": "UK 8",
+        "available": true
+      },
+      {
+        "size": "UK 9",
+        "available": true
+      },
+      {
+        "size": "UK 10",
+        "available": true
+      },
+      {
+        "size": "UK 11",
+        "available": true
+      }
+    ]
+  },
+  {
+    "slug": "air-jordan-1-low-travis-scott-reverse-mocha",
+    "name": "Air Jordan 1 Low OG \"Travis Scott Reverse Mocha\"",
+    "brand": "Jordan",
+    "category": "sneakers",
+    "description": "The iconic Travis Scott x Air Jordan 1 Low Reverse Mocha in sail leather overlays, dark mocha nubuck base, reverse cream Swoosh, and Cactus Jack detailing. Sourced on-demand directly via Soleslay vault partners with 100% physical authenticity verification.",
+    "price": null,
+    "sku": "DM7866-162",
+    "images": [
+      {
+        "src": "/static/images/products/jordan-1-low-craft.jpg",
+        "alt": "Air Jordan 1 Low Travis Scott Reverse Mocha"
+      },
+      {
+        "src": "/static/images/products/jordan-1-low-craft-detail-upper.jpg",
+        "alt": "Air Jordan 1 Low Travis Scott Reverse Mocha"
+      },
+      {
+        "src": "/static/images/products/jordan-1-low-craft-detail-heel.jpg",
+        "alt": "Air Jordan 1 Low Travis Scott Reverse Mocha"
+      },
+      {
+        "src": "/static/images/products/jordan-1-low-craft-detail-sole.jpg",
+        "alt": "Air Jordan 1 Low Travis Scott Reverse Mocha"
+      }
+    ],
+    "seo_title": null,
+    "seo_description": null,
+    "in_stock": true,
+    "is_new": true,
+    "is_featured": true,
+    "gender": "unisex",
+    "availability_status": "check_availability"
+  },
+  {
+    "slug": "onitsuka-tiger-mexico-66-beige-navy",
+    "name": "Onitsuka Tiger Mexico 66",
+    "brand": "Onitsuka Tiger",
+    "category": "sneakers",
+    "description": "The classic Onitsuka Tiger Mexico 66 in beige nylon with navy side stripes, suede toe cap and heel, and the signature tiger-stripe branding on the tongue.",
+    "price": null,
+    "sku": null,
+    "images": [
+      {
+        "src": "/static/images/products/onitsuka-tiger-mexico66-beige-navy.jpg",
+        "alt": "Onitsuka Tiger Mexico 66 sneaker in beige with navy stripes, displayed on store table"
+      },
+      {
+        "src": "/static/images/products/onitsuka-tiger-mexico66-beige-navy-detail-upper.jpg",
+        "alt": "Onitsuka Tiger Mexico 66 - Upper & Stitch Detail"
+      },
+      {
+        "src": "/static/images/products/onitsuka-tiger-mexico66-beige-navy-detail-heel.jpg",
+        "alt": "Onitsuka Tiger Mexico 66 - Heel & Texture Angle"
+      },
+      {
+        "src": "/static/images/products/onitsuka-tiger-mexico66-beige-navy-detail-sole.jpg",
+        "alt": "Onitsuka Tiger Mexico 66 - Outsole & Profile View"
+      }
+    ],
+    "seo_title": "Onitsuka Tiger Mexico 66 Beige & Navy | Soleslay Guduvanchery",
+    "seo_description": "Onitsuka Tiger Mexico 66 in beige and navy at Soleslay, Guduvanchery. WhatsApp us for availability and sizing.",
+    "in_stock": true,
+    "is_new": false,
+    "is_featured": false,
+    "sizes": [
+      {
+        "size": "UK 6",
+        "available": true
+      },
+      {
+        "size": "UK 7",
+        "available": true
+      },
+      {
+        "size": "UK 8",
+        "available": true
+      },
+      {
+        "size": "UK 9",
+        "available": true
+      },
+      {
+        "size": "UK 10",
+        "available": true
+      },
+      {
+        "size": "UK 11",
+        "available": true
+      }
+    ]
+  },
+  {
+    "slug": "onitsuka-tiger-mexico-66-silver",
+    "name": "Onitsuka Tiger Mexico 66 Metallic Silver",
+    "brand": "Onitsuka Tiger",
+    "category": "sneakers",
+    "description": "A metallic silver take on the Onitsuka Tiger Mexico 66, with contrast black stripes and a cream outsole for a standout, fashion-forward look.",
+    "price": null,
+    "sku": null,
+    "images": [
+      {
+        "src": "/static/images/products/onitsuka-tiger-mexico66-silver.jpg",
+        "alt": "Onitsuka Tiger Mexico 66 sneaker in metallic silver with black stripes"
+      },
+      {
+        "src": "/static/images/products/onitsuka-tiger-mexico66-silver-detail-upper.jpg",
+        "alt": "Onitsuka Tiger Mexico 66 Metallic Silver - Upper & Stitch Detail"
+      },
+      {
+        "src": "/static/images/products/onitsuka-tiger-mexico66-silver-detail-heel.jpg",
+        "alt": "Onitsuka Tiger Mexico 66 Metallic Silver - Heel & Texture Angle"
+      },
+      {
+        "src": "/static/images/products/onitsuka-tiger-mexico66-silver-detail-sole.jpg",
+        "alt": "Onitsuka Tiger Mexico 66 Metallic Silver - Outsole & Profile View"
+      }
+    ],
+    "seo_title": "Onitsuka Tiger Mexico 66 Silver | Soleslay Guduvanchery",
+    "seo_description": "Metallic silver Onitsuka Tiger Mexico 66 sneakers at Soleslay, Guduvanchery. WhatsApp us to check stock.",
+    "in_stock": true,
+    "is_new": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "size": "UK 6",
+        "available": true
+      },
+      {
+        "size": "UK 7",
+        "available": true
+      },
+      {
+        "size": "UK 8",
+        "available": true
+      },
+      {
+        "size": "UK 9",
+        "available": true
+      },
+      {
+        "size": "UK 10",
+        "available": true
+      },
+      {
+        "size": "UK 11",
+        "available": true
+      }
+    ]
+  },
+  {
+    "slug": "woodland-leather-trail-shoe-tan",
+    "name": "Woodland Leather Trail Shoe",
+    "brand": "Woodland",
+    "category": "sports-shoes",
+    "description": "A tan nubuck leather trail shoe from Woodland with a padded ankle collar, contrast lacing hardware and a thick multi-terrain outsole with the signature leaf logo.",
+    "price": null,
+    "sku": null,
+    "images": [
+      {
+        "src": "/static/images/products/woodland-leather-shoe-tan.jpg",
+        "alt": "Woodland tan leather trail shoe, side and top view pair"
+      },
+      {
+        "src": "/static/images/products/woodland-leather-shoe-tan-detail-upper.jpg",
+        "alt": "Woodland Leather Trail Shoe - Upper & Stitch Detail"
+      },
+      {
+        "src": "/static/images/products/woodland-leather-shoe-tan-detail-heel.jpg",
+        "alt": "Woodland Leather Trail Shoe - Heel & Texture Angle"
+      },
+      {
+        "src": "/static/images/products/woodland-leather-shoe-tan-detail-sole.jpg",
+        "alt": "Woodland Leather Trail Shoe - Outsole & Profile View"
+      }
+    ],
+    "seo_title": "Woodland Leather Trail Shoe - Tan | Soleslay Guduvanchery",
+    "seo_description": "Woodland tan leather trail shoes at Soleslay, Guduvanchery. Built for daily wear and light trekking. WhatsApp us for sizes.",
+    "in_stock": true,
+    "is_new": false,
+    "is_featured": false,
+    "sizes": [
+      {
+        "size": "UK 6",
+        "available": true
+      },
+      {
+        "size": "UK 7",
+        "available": true
+      },
+      {
+        "size": "UK 8",
+        "available": true
+      },
+      {
+        "size": "UK 9",
+        "available": true
+      },
+      {
+        "size": "UK 10",
+        "available": true
+      },
+      {
+        "size": "UK 11",
+        "available": true
+      }
+    ]
+  },
+  {
+    "slug": "woodland-sneaker-tan-nubuck",
+    "name": "Woodland Nubuck Sneaker",
+    "brand": "Woodland",
+    "category": "sneakers",
+    "description": "A tan nubuck leather sneaker from Woodland with a low-profile silhouette, perforated detailing and a grippy dotted rubber outsole.",
+    "price": 3995.0,
+    "sku": null,
+    "images": [
+      {
+        "src": "/static/images/products/woodland-sneaker-tan-3995.jpg",
+        "alt": "Woodland tan nubuck sneaker, sole and side view"
+      },
+      {
+        "src": "/static/images/products/woodland-sneaker-tan-3995-detail-upper.jpg",
+        "alt": "Woodland Nubuck Sneaker - Upper & Stitch Detail"
+      },
+      {
+        "src": "/static/images/products/woodland-sneaker-tan-3995-detail-heel.jpg",
+        "alt": "Woodland Nubuck Sneaker - Heel & Texture Angle"
+      },
+      {
+        "src": "/static/images/products/woodland-sneaker-tan-3995-detail-sole.jpg",
+        "alt": "Woodland Nubuck Sneaker - Outsole & Profile View"
+      }
+    ],
+    "seo_title": "Woodland Nubuck Sneaker - Tan | Soleslay Guduvanchery",
+    "seo_description": "Woodland tan nubuck sneakers at Soleslay, Guduvanchery. Everyday casual sneakers with a durable grip sole. WhatsApp us for availability.",
+    "in_stock": true,
+    "is_new": false,
+    "is_featured": true,
+    "sizes": [
+      {
+        "size": "UK 6",
+        "available": true
+      },
+      {
+        "size": "UK 7",
+        "available": true
+      },
+      {
+        "size": "UK 8",
+        "available": true
+      },
+      {
+        "size": "UK 9",
+        "available": true
+      },
+      {
+        "size": "UK 10",
+        "available": true
+      },
+      {
+        "size": "UK 11",
+        "available": true
+      }
+    ]
+  },
+  {
+    "slug": "adidas-terrex-trail-runner-teal",
+    "name": "Adidas Terrex Trail Running Shoe",
+    "brand": "Adidas",
+    "category": "sports-shoes",
+    "description": "An Adidas Terrex trail running shoe in black and teal with Continental rubber outsole grip and GORE-TEX weather protection, built for off-road running and hiking.",
+    "price": null,
+    "sku": null,
+    "images": [
+      {
+        "src": "/static/images/products/adidas-terrex-trail-shoe.png",
+        "alt": "Adidas Terrex GORE-TEX trail running shoe in black and teal"
+      },
+      {
+        "src": "/static/images/products/adidas-terrex-trail-shoe-detail-upper.png",
+        "alt": "Adidas Terrex Trail Running Shoe - Upper & Stitch Detail"
+      },
+      {
+        "src": "/static/images/products/adidas-terrex-trail-shoe-detail-heel.png",
+        "alt": "Adidas Terrex Trail Running Shoe - Heel & Texture Angle"
+      },
+      {
+        "src": "/static/images/products/adidas-terrex-trail-shoe-detail-sole.png",
+        "alt": "Adidas Terrex Trail Running Shoe - Outsole & Profile View"
+      }
+    ],
+    "seo_title": "Adidas Terrex Trail Running Shoe | Soleslay Guduvanchery",
+    "seo_description": "Adidas Terrex trail running shoes with Continental grip outsole, available at Soleslay, Guduvanchery. WhatsApp us for stock.",
+    "in_stock": true,
+    "is_new": false,
+    "is_featured": true,
+    "sizes": [
+      {
+        "size": "UK 6",
+        "available": true
+      },
+      {
+        "size": "UK 7",
+        "available": true
+      },
+      {
+        "size": "UK 8",
+        "available": true
+      },
+      {
+        "size": "UK 9",
+        "available": true
+      },
+      {
+        "size": "UK 10",
+        "available": true
+      },
+      {
+        "size": "UK 11",
+        "available": true
+      }
+    ]
+  },
+  {
+    "slug": "under-armour-runner-black-grey",
+    "name": "Under Armour Performance Runner",
+    "brand": "Under Armour",
+    "category": "sports-shoes",
+    "description": "An Under Armour performance running shoe in black and grey with a moulded heel cage, toggle lacing and a responsive foam midsole.",
+    "price": null,
+    "sku": null,
+    "images": [
+      {
+        "src": "/static/images/products/under-armour-runner-black.png",
+        "alt": "Under Armour black and white performance running shoe"
+      },
+      {
+        "src": "/static/images/products/under-armour-runner-black-detail-upper.png",
+        "alt": "Under Armour Performance Runner - Upper & Stitch Detail"
+      },
+      {
+        "src": "/static/images/products/under-armour-runner-black-detail-heel.png",
+        "alt": "Under Armour Performance Runner - Heel & Texture Angle"
+      },
+      {
+        "src": "/static/images/products/under-armour-runner-black-detail-sole.png",
+        "alt": "Under Armour Performance Runner - Outsole & Profile View"
+      }
+    ],
+    "seo_title": "Under Armour Performance Runner | Soleslay Guduvanchery",
+    "seo_description": "Under Armour performance running shoes at Soleslay, Guduvanchery. WhatsApp us to check current sizes in stock.",
+    "in_stock": true,
+    "is_new": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "size": "UK 6",
+        "available": true
+      },
+      {
+        "size": "UK 7",
+        "available": true
+      },
+      {
+        "size": "UK 8",
+        "available": true
+      },
+      {
+        "size": "UK 9",
+        "available": true
+      },
+      {
+        "size": "UK 10",
+        "available": true
+      },
+      {
+        "size": "UK 11",
+        "available": true
+      }
+    ]
+  },
+  {
+    "slug": "woodland-boot-tan-4195",
+    "name": "Woodland Chukka Boot",
+    "brand": "Woodland",
+    "category": "boots",
+    "description": "A tan nubuck leather chukka boot from Woodland with a ridged rubber sole, hook lacing hardware and the classic leaf-print heel guard.",
+    "price": 4195.0,
+    "sku": null,
+    "images": [
+      {
+        "src": "/static/images/products/woodland-boot-tan-4195.jpg",
+        "alt": "Woodland tan chukka boot, side view"
+      },
+      {
+        "src": "/static/images/products/woodland-boot-tan-4195-detail-upper.jpg",
+        "alt": "Woodland Chukka Boot - Upper & Stitch Detail"
+      },
+      {
+        "src": "/static/images/products/woodland-boot-tan-4195-detail-heel.jpg",
+        "alt": "Woodland Chukka Boot - Heel & Texture Angle"
+      },
+      {
+        "src": "/static/images/products/woodland-boot-tan-4195-detail-sole.jpg",
+        "alt": "Woodland Chukka Boot - Outsole & Profile View"
+      }
+    ],
+    "seo_title": "Woodland Chukka Boot - Tan | Soleslay Guduvanchery",
+    "seo_description": "Woodland tan chukka boots at Soleslay, Guduvanchery. WhatsApp us for size availability and price confirmation.",
+    "in_stock": true,
+    "is_new": false,
+    "is_featured": false,
+    "sizes": [
+      {
+        "size": "UK 6",
+        "available": true
+      },
+      {
+        "size": "UK 7",
+        "available": true
+      },
+      {
+        "size": "UK 8",
+        "available": true
+      },
+      {
+        "size": "UK 9",
+        "available": true
+      },
+      {
+        "size": "UK 10",
+        "available": true
+      },
+      {
+        "size": "UK 11",
+        "available": true
+      }
+    ]
+  },
+  {
+    "slug": "woodland-comfort-floaters-khaki",
+    "name": "Khaki Woodland Comfort Floaters",
+    "brand": "Woodland",
+    "category": "sandals",
+    "description": "Khaki Woodland Comfort Floaters with a two-strap hook-and-loop closure, cushioned footbed and a heavy-duty lugged outsole for everyday comfort.",
+    "price": 3495.0,
+    "sku": null,
+    "images": [
+      {
+        "src": "/static/images/products/woodland-comfort-floaters-khaki.jpg",
+        "alt": "Khaki Woodland Comfort Floaters sandal pair, sole and top view"
+      },
+      {
+        "src": "/static/images/products/woodland-comfort-floaters-khaki-detail-upper.jpg",
+        "alt": "Khaki Woodland Comfort Floaters - Upper & Stitch Detail"
+      },
+      {
+        "src": "/static/images/products/woodland-comfort-floaters-khaki-detail-heel.jpg",
+        "alt": "Khaki Woodland Comfort Floaters - Heel & Texture Angle"
+      },
+      {
+        "src": "/static/images/products/woodland-comfort-floaters-khaki-detail-sole.jpg",
+        "alt": "Khaki Woodland Comfort Floaters - Outsole & Profile View"
+      }
+    ],
+    "seo_title": "Khaki Woodland Comfort Floaters | Soleslay Guduvanchery",
+    "seo_description": "Khaki Woodland Comfort Floaters at Soleslay, Guduvanchery. Everyday comfort sandals. WhatsApp us for availability.",
+    "in_stock": true,
+    "is_new": false,
+    "is_featured": true,
+    "sizes": [
+      {
+        "size": "UK 6",
+        "available": true
+      },
+      {
+        "size": "UK 7",
+        "available": true
+      },
+      {
+        "size": "UK 8",
+        "available": true
+      },
+      {
+        "size": "UK 9",
+        "available": true
+      },
+      {
+        "size": "UK 10",
+        "available": true
+      },
+      {
+        "size": "UK 11",
+        "available": true
+      }
+    ]
+  },
+  {
+    "slug": "onitsuka-tiger-mexico-66-yellow-black",
+    "name": "Onitsuka Tiger Mexico 66 Yellow",
+    "brand": "Onitsuka Tiger",
+    "category": "sneakers",
+    "description": "A bold yellow-and-black colourway of the Onitsuka Tiger Mexico 66, with the classic tiger-stripe side panel and cream sole.",
+    "price": null,
+    "sku": null,
+    "images": [
+      {
+        "src": "/static/images/products/onitsuka-tiger-mexico66-yellow-black.jpg",
+        "alt": "Onitsuka Tiger Mexico 66 sneaker in yellow with black stripes"
+      },
+      {
+        "src": "/static/images/products/onitsuka-tiger-mexico66-yellow-black-detail-upper.jpg",
+        "alt": "Onitsuka Tiger Mexico 66 Yellow - Upper & Stitch Detail"
+      },
+      {
+        "src": "/static/images/products/onitsuka-tiger-mexico66-yellow-black-detail-heel.jpg",
+        "alt": "Onitsuka Tiger Mexico 66 Yellow - Heel & Texture Angle"
+      },
+      {
+        "src": "/static/images/products/onitsuka-tiger-mexico66-yellow-black-detail-sole.jpg",
+        "alt": "Onitsuka Tiger Mexico 66 Yellow - Outsole & Profile View"
+      }
+    ],
+    "seo_title": "Onitsuka Tiger Mexico 66 Yellow | Soleslay Guduvanchery",
+    "seo_description": "Onitsuka Tiger Mexico 66 in yellow and black at Soleslay, Guduvanchery. WhatsApp us to check availability.",
+    "in_stock": true,
+    "is_new": false,
+    "is_featured": false,
+    "sizes": [
+      {
+        "size": "UK 6",
+        "available": true
+      },
+      {
+        "size": "UK 7",
+        "available": true
+      },
+      {
+        "size": "UK 8",
+        "available": true
+      },
+      {
+        "size": "UK 9",
+        "available": true
+      },
+      {
+        "size": "UK 10",
+        "available": true
+      },
+      {
+        "size": "UK 11",
+        "available": true
+      }
+    ]
+  },
+  {
+    "slug": "woodland-utrek-hiking-boot-tan",
+    "name": "Woodland U-TREK Hiking Boot",
+    "brand": "Woodland",
+    "category": "boots",
+    "description": "The Woodland U-TREK urban trekking boot in tan leather with a black rubber pull-tab, buckled lacing and a chunky lugged sole for serious grip.",
+    "price": null,
+    "sku": null,
+    "images": [
+      {
+        "src": "/static/images/products/woodland-utrek-hiking-boot-tan.jpg",
+        "alt": "Woodland U-TREK tan hiking boot pair"
+      },
+      {
+        "src": "/static/images/products/woodland-utrek-hiking-boot-tan-detail-upper.jpg",
+        "alt": "Woodland U-TREK Hiking Boot - Upper & Stitch Detail"
+      },
+      {
+        "src": "/static/images/products/woodland-utrek-hiking-boot-tan-detail-heel.jpg",
+        "alt": "Woodland U-TREK Hiking Boot - Heel & Texture Angle"
+      },
+      {
+        "src": "/static/images/products/woodland-utrek-hiking-boot-tan-detail-sole.jpg",
+        "alt": "Woodland U-TREK Hiking Boot - Outsole & Profile View"
+      }
+    ],
+    "seo_title": "Woodland U-TREK Hiking Boot - Tan | Soleslay Guduvanchery",
+    "seo_description": "Woodland U-TREK tan hiking boots at Soleslay, Guduvanchery. WhatsApp us to check current size availability.",
+    "in_stock": true,
+    "is_new": false,
+    "is_featured": false,
+    "sizes": [
+      {
+        "size": "UK 6",
+        "available": true
+      },
+      {
+        "size": "UK 7",
+        "available": true
+      },
+      {
+        "size": "UK 8",
+        "available": true
+      },
+      {
+        "size": "UK 9",
+        "available": true
+      },
+      {
+        "size": "UK 10",
+        "available": true
+      },
+      {
+        "size": "UK 11",
+        "available": true
+      }
+    ]
+  },
+  {
+    "slug": "onitsuka-tiger-mexico-66-black-white",
+    "name": "Onitsuka Tiger Mexico 66 Black & White",
+    "brand": "Onitsuka Tiger",
+    "category": "sneakers",
+    "description": "A monochrome Onitsuka Tiger Mexico 66 in black leather with crisp white side stripes and Ortholite cushioned insole.",
+    "price": null,
+    "sku": null,
+    "images": [
+      {
+        "src": "/static/images/products/onitsuka-tiger-mexico66-black-white.jpg",
+        "alt": "Onitsuka Tiger Mexico 66 sneaker in black with white stripes"
+      },
+      {
+        "src": "/static/images/products/onitsuka-tiger-mexico66-black-white-detail-upper.jpg",
+        "alt": "Onitsuka Tiger Mexico 66 Black & White - Upper & Stitch Detail"
+      },
+      {
+        "src": "/static/images/products/onitsuka-tiger-mexico66-black-white-detail-heel.jpg",
+        "alt": "Onitsuka Tiger Mexico 66 Black & White - Heel & Texture Angle"
+      },
+      {
+        "src": "/static/images/products/onitsuka-tiger-mexico66-black-white-detail-sole.jpg",
+        "alt": "Onitsuka Tiger Mexico 66 Black & White - Outsole & Profile View"
+      }
+    ],
+    "seo_title": "Onitsuka Tiger Mexico 66 Black & White | Soleslay Guduvanchery",
+    "seo_description": "Onitsuka Tiger Mexico 66 in black and white at Soleslay, Guduvanchery. WhatsApp us for sizing and stock.",
+    "in_stock": true,
+    "is_new": false,
+    "is_featured": true,
+    "sizes": [
+      {
+        "size": "UK 6",
+        "available": true
+      },
+      {
+        "size": "UK 7",
+        "available": true
+      },
+      {
+        "size": "UK 8",
+        "available": true
+      },
+      {
+        "size": "UK 9",
+        "available": true
+      },
+      {
+        "size": "UK 10",
+        "available": true
+      },
+      {
+        "size": "UK 11",
+        "available": true
+      }
+    ]
+  },
+  {
+    "slug": "converse-chuck-70-hi-black",
+    "name": "Converse Chuck 70 Hi",
+    "brand": "Converse",
+    "category": "sneakers",
+    "description": "The Converse Chuck 70 Hi in black canvas, featuring the classic All Star ankle patch, off-white rubber cap toe and vintage midsole styling.",
+    "price": null,
+    "sku": null,
+    "images": [
+      {
+        "src": "/static/images/products/converse-chuck70-hi-black.jpg",
+        "alt": "Converse Chuck 70 Hi sneaker in black canvas"
+      },
+      {
+        "src": "/static/images/products/converse-chuck70-hi-black-detail-upper.jpg",
+        "alt": "Converse Chuck 70 Hi - Upper & Stitch Detail"
+      },
+      {
+        "src": "/static/images/products/converse-chuck70-hi-black-detail-heel.jpg",
+        "alt": "Converse Chuck 70 Hi - Heel & Texture Angle"
+      },
+      {
+        "src": "/static/images/products/converse-chuck70-hi-black-detail-sole.jpg",
+        "alt": "Converse Chuck 70 Hi - Outsole & Profile View"
+      }
+    ],
+    "seo_title": "Converse Chuck 70 Hi - Black | Soleslay Guduvanchery",
+    "seo_description": "Converse Chuck 70 Hi in black at Soleslay, Guduvanchery. WhatsApp us to check current stock and sizes.",
+    "in_stock": true,
+    "is_new": false,
+    "is_featured": false,
+    "sizes": [
+      {
+        "size": "UK 6",
+        "available": true
+      },
+      {
+        "size": "UK 7",
+        "available": true
+      },
+      {
+        "size": "UK 8",
+        "available": true
+      },
+      {
+        "size": "UK 9",
+        "available": true
+      },
+      {
+        "size": "UK 10",
+        "available": true
+      },
+      {
+        "size": "UK 11",
+        "available": true
+      }
+    ]
+  },
+  {
+    "slug": "hoka-speedgoat-7-trail-black",
+    "name": "Hoka Speedgoat 7",
+    "brand": "Hoka",
+    "category": "sports-shoes",
+    "description": "The Hoka Speedgoat 7 trail running shoe in triple black with a Vibram Megagrip outsole, built for stability on technical terrain.",
+    "price": null,
+    "sku": null,
+    "images": [
+      {
+        "src": "/static/images/products/hoka-speedgoat-trail-black.jpg",
+        "alt": "Hoka Speedgoat 7 trail running shoe in black with Vibram sole"
+      },
+      {
+        "src": "/static/images/products/hoka-speedgoat-trail-black-detail-upper.jpg",
+        "alt": "Hoka Speedgoat 7 - Upper & Stitch Detail"
+      },
+      {
+        "src": "/static/images/products/hoka-speedgoat-trail-black-detail-heel.jpg",
+        "alt": "Hoka Speedgoat 7 - Heel & Texture Angle"
+      },
+      {
+        "src": "/static/images/products/hoka-speedgoat-trail-black-detail-sole.jpg",
+        "alt": "Hoka Speedgoat 7 - Outsole & Profile View"
+      }
+    ],
+    "seo_title": "Hoka Speedgoat 7 Trail Shoe | Soleslay Guduvanchery",
+    "seo_description": "Hoka Speedgoat 7 trail running shoes with Vibram Megagrip sole at Soleslay, Guduvanchery. WhatsApp us for availability.",
+    "in_stock": true,
+    "is_new": true,
+    "is_featured": true,
+    "sizes": [
+      {
+        "size": "UK 6",
+        "available": true
+      },
+      {
+        "size": "UK 7",
+        "available": true
+      },
+      {
+        "size": "UK 8",
+        "available": true
+      },
+      {
+        "size": "UK 9",
+        "available": true
+      },
+      {
+        "size": "UK 10",
+        "available": true
+      },
+      {
+        "size": "UK 11",
+        "available": true
+      }
+    ]
+  },
+  {
+    "slug": "nike-air-force-1-white",
+    "name": "Nike Air Force 1 '07",
+    "brand": "Nike",
+    "category": "sneakers",
+    "description": "The all-white Nike Air Force 1 '07 in full-grain leather with the classic perforated toe box and Air-Sole cushioning, a timeless everyday sneaker.",
+    "price": null,
+    "sku": null,
+    "images": [
+      {
+        "src": "/static/images/products/nike-air-force-1-white.jpg",
+        "alt": "Nike Air Force 1 '07 sneaker pair in white, held above shoe box"
+      },
+      {
+        "src": "/static/images/products/nike-air-force-1-white-detail-upper.jpg",
+        "alt": "Nike Air Force 1 '07 - Upper & Stitch Detail"
+      },
+      {
+        "src": "/static/images/products/nike-air-force-1-white-detail-heel.jpg",
+        "alt": "Nike Air Force 1 '07 - Heel & Texture Angle"
+      },
+      {
+        "src": "/static/images/products/nike-air-force-1-white-detail-sole.jpg",
+        "alt": "Nike Air Force 1 '07 - Outsole & Profile View"
+      }
+    ],
+    "seo_title": "Nike Air Force 1 '07 White | Soleslay Guduvanchery",
+    "seo_description": "Nike Air Force 1 '07 in white at Soleslay, Guduvanchery. WhatsApp us to check availability and sizes.",
+    "in_stock": true,
+    "is_new": false,
+    "is_featured": true,
+    "sizes": [
+      {
+        "size": "UK 6",
+        "available": true
+      },
+      {
+        "size": "UK 7",
+        "available": true
+      },
+      {
+        "size": "UK 8",
+        "available": true
+      },
+      {
+        "size": "UK 9",
+        "available": true
+      },
+      {
+        "size": "UK 10",
+        "available": true
+      },
+      {
+        "size": "UK 11",
+        "available": true
+      }
+    ]
+  },
+  {
+    "slug": "woodland-sandal-4809-cml-tan",
+    "name": "Woodland Sandal 4809 CML",
+    "brand": "Woodland",
+    "category": "sandals",
+    "description": "Woodland sport sandal model 4809 CML in camel tan, with triple adjustable straps, a two-tone midsole and a rugged trekking outsole.",
+    "price": 3295.0,
+    "sku": "4809 CML",
+    "images": [
+      {
+        "src": "/static/images/products/woodland-sandal-4809cml-tan.jpg",
+        "alt": "Woodland sandal model 4809 CML in tan, pair with sole view"
+      },
+      {
+        "src": "/static/images/products/woodland-sandal-4809cml-tan-detail-upper.jpg",
+        "alt": "Woodland Sandal 4809 CML - Upper & Stitch Detail"
+      },
+      {
+        "src": "/static/images/products/woodland-sandal-4809cml-tan-detail-heel.jpg",
+        "alt": "Woodland Sandal 4809 CML - Heel & Texture Angle"
+      },
+      {
+        "src": "/static/images/products/woodland-sandal-4809cml-tan-detail-sole.jpg",
+        "alt": "Woodland Sandal 4809 CML - Outsole & Profile View"
+      }
+    ],
+    "seo_title": "Woodland Sandal 4809 CML - Tan | Soleslay Guduvanchery",
+    "seo_description": "Woodland sport sandal 4809 CML in tan at Soleslay, Guduvanchery. WhatsApp us for availability.",
+    "in_stock": true,
+    "is_new": false,
+    "is_featured": false,
+    "sizes": [
+      {
+        "size": "UK 6",
+        "available": true
+      },
+      {
+        "size": "UK 7",
+        "available": true
+      },
+      {
+        "size": "UK 8",
+        "available": true
+      },
+      {
+        "size": "UK 9",
+        "available": true
+      },
+      {
+        "size": "UK 10",
+        "available": true
+      },
+      {
+        "size": "UK 11",
+        "available": true
+      }
+    ]
+  }
+]

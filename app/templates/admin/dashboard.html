@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block heading %}Dashboard{% endblock %}
+{% block content %}
+
+<div class="stat-grid">
+  <div class="stat-card"><div class="stat-value">{{ stats.total_products }}</div><div class="stat-label">Products</div></div>
+  <div class="stat-card"><div class="stat-value">{{ stats.new_arrivals }}</div><div class="stat-label">New Arrivals</div></div>
+  <div class="stat-card"><div class="stat-value">{{ stats.featured }}</div><div class="stat-label">Featured</div></div>
+  <div class="stat-card"><div class="stat-value">{{ stats.out_of_stock }}</div><div class="stat-label">Out of Stock</div></div>
+  <div class="stat-card"><div class="stat-value">{{ stats.unpublished }}</div><div class="stat-label">Drafts</div></div>
+  <div class="stat-card"><div class="stat-value">{{ stats.categories }}</div><div class="stat-label">Categories</div></div>
+  <div class="stat-card"><div class="stat-value">{{ stats.brands }}</div><div class="stat-label">Brands</div></div>
+</div>
+
+<div class="quick-actions">
+  <a class="btn btn-primary" href="/admin/products/new">+ Add Product</a>
+  <a class="btn" href="/admin/products">Manage Products</a>
+  <a class="btn" href="/admin/homepage">Manage Homepage</a>
+  <a class="btn" href="/admin/media">Upload Media</a>
+  <a class="btn" href="/admin/settings">Business Settings</a>
+</div>
+
+<div class="card">
+  <h2>Recently updated products</h2>
+  {% if recent_products %}
+  <table>
+    <thead><tr><th>Name</th><th>Status</th><th>Updated</th><th></th></tr></thead>
+    <tbody>
+      {% for p in recent_products %}
+      <tr>
+        <td>{{ p.name }}</td>
+        <td>
+          {% if p.published %}<span class="badge badge-published">Published</span>{% else %}<span class="badge badge-draft">Draft</span>{% endif %}
+        </td>
+        <td>{{ p.updated_at.strftime("%d %b %Y, %H:%M") }}</td>
+        <td><a href="/admin/products/{{ p.id }}/edit">Edit →</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <div class="empty-state">No products yet. <a href="/admin/products/new">Add your first product</a>.</div>
+  {% endif %}
+</div>
+
+{% endblock %}

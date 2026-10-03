@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}Products{% endblock %}
+{% block heading %}Products{% endblock %}
+{% block actions %}<a class="btn btn-primary" href="/admin/products/new">+ Add Product</a>{% endblock %}
+{% block content %}
+
+<form method="get" action="/admin/products" class="form-group" style="max-width:320px;">
+  <input type="search" name="q" placeholder="Search products…" value="{{ q }}">
+</form>
+
+{% if products %}
+<div class="card" style="padding:0;">
+<div class="table-scroll">
+<table>
+  <thead>
+    <tr><th></th><th>Name</th><th>Brand</th><th>Category</th><th>Price</th><th>Status</th><th>Flags</th><th></th></tr>
+  </thead>
+  <tbody>
+    {% for p in products %}
+    <tr>
+      <td>
+        {% if p.images %}
+        <img class="table-thumb" src="{{ p.images[0].src }}" alt="">
+        {% else %}
+        <div class="table-thumb"></div>
+        {% endif %}
+      </td>
+      <td>
+        <a href="/admin/products/{{ p.id }}/edit">{{ p.name }}</a>
+        <div class="hint">{{ p.slug }}</div>
+      </td>
+      <td>{{ p.brand_ref.name if p.brand_ref else "—" }}</td>
+      <td>{{ p.category_ref.name if p.category_ref else "—" }}</td>
+      <td>{% if p.price %}₹{{ "%.0f"|format(p.price) }}{% else %}—{% endif %}</td>
+      <td>
+        <form method="post" action="/admin/products/{{ p.id }}/toggle-publish" style="display:inline;">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+          {% if p.published %}
+          <button type="submit" class="badge badge-published" style="border:none; cursor:pointer; font-family:inherit;" title="Click to unpublish">Published</button>
+          {% else %}
+          <button type="submit" class="badge badge-draft" style="border:none; cursor:pointer; font-family:inherit;" title="Click to publish">Draft</button>
+          {% endif %}
+        </form>
+        {% if not p.in_stock %}<span class="badge badge-out">Out of stock</span>{% endif %}
+      </td>
+      <td>
+        <div class="tag-list">
+          {% if p.is_new %}<span class="badge badge-new">New</span>{% endif %}
+          {% if p.is_featured %}<span class="badge badge-featured">Featured</span>{% endif %}
+        </div>
+      </td>
+      <td>
+        <a href="/admin/products/{{ p.id }}/edit" class="btn btn-sm">Edit</a>
+        <form method="post" action="/admin/products/{{ p.id }}/delete" style="display:inline;" data-confirm="Delete “{{ p.name }}” permanently? This cannot be undone.">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+          <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+</div>
+{% else %}
+<div class="empty-state">
+  {% if q %}No products match “{{ q }}”.{% else %}No products yet. <a href="/admin/products/new">Add your first product</a>.{% endif %}
+</div>
+{% endif %}
+
+{% endblock %}

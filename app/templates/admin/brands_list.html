@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Brands{% endblock %}
+{% block heading %}Brands{% endblock %}
+{% block actions %}<a class="btn btn-primary" href="/admin/brands/new">+ Add Brand</a>{% endblock %}
+{% block content %}
+
+{% if brands %}
+<div class="card" style="padding:0;">
+<div class="table-scroll">
+<table>
+  <thead><tr><th></th><th>Name</th><th>Slug</th><th>Products</th><th>Status</th><th></th></tr></thead>
+  <tbody>
+    {% for b in brands %}
+    <tr>
+      <td>{% if b.image %}<img class="table-thumb" src="{{ b.image }}" alt="">{% else %}<div class="table-thumb"></div>{% endif %}</td>
+      <td><a href="/admin/brands/{{ b.id }}/edit">{{ b.name }}</a></td>
+      <td>{{ b.slug }}</td>
+      <td>{{ counts[b.id] }}</td>
+      <td>{% if b.active %}<span class="badge badge-published">Active</span>{% else %}<span class="badge badge-draft">Inactive</span>{% endif %}</td>
+      <td>
+        <a href="/admin/brands/{{ b.id }}/edit" class="btn btn-sm">Edit</a>
+        <form method="post" action="/admin/brands/{{ b.id }}/delete" style="display:inline;" data-confirm="Delete “{{ b.name }}”? {{ counts[b.id] }} product(s) will be unlinked from this brand (not deleted).">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+          <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+</div>
+{% else %}
+<div class="empty-state">No brands yet. <a href="/admin/brands/new">Add one</a>.</div>
+{% endif %}
+
+{% endblock %}

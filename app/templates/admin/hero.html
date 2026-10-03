@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block title %}Hero{% endblock %}
+{% block heading %}Hero Carousel{% endblock %}
+{% block actions %}<a class="btn" href="/admin/homepage">← Back to homepage</a>{% endblock %}
+{% block content %}
+
+<div class="card">
+  <h2>Add a hero slide</h2>
+  {% if products %}
+  <form method="post" action="/admin/hero/new">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <div class="form-grid">
+      <div class="form-group">
+        <label for="product_id">Product *</label>
+        <select id="product_id" name="product_id" required>
+          {% for p in products %}
+          <option value="{{ p.id }}">{{ p.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="eyebrow">Eyebrow text</label>
+        <input type="text" id="eyebrow" name="eyebrow" placeholder="e.g. New Drop">
+      </div>
+      <div class="form-group full">
+        <label for="headline">Headline</label>
+        <input type="text" id="headline" name="headline" placeholder="Defaults to the product name">
+      </div>
+      <div class="form-group full">
+        <label for="description">Description</label>
+        <textarea id="description" name="description"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="cta_label">CTA label</label>
+        <input type="text" id="cta_label" name="cta_label" placeholder="e.g. Shop Now">
+      </div>
+      <div class="form-group">
+        <label for="cta_url">CTA URL</label>
+        <input type="text" id="cta_url" name="cta_url" placeholder="Defaults to the product page">
+      </div>
+      <div class="form-group">
+        <label class="checkbox-row"><input type="checkbox" name="active" checked> Active</label>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Add slide</button>
+  </form>
+  {% else %}
+  <div class="empty-state">You need at least one published product before adding a hero slide.</div>
+  {% endif %}
+</div>
+
+<div class="card">
+  <h2>Current slides</h2>
+  {% if slides %}
+  <div class="table-scroll">
+  <table>
+    <thead><tr><th></th><th>Product</th><th>Headline</th><th>Status</th><th></th></tr></thead>
+    <tbody>
+      {% for s in slides %}
+      <tr>
+        <td>{% if s.product.images %}<img class="table-thumb" src="{{ s.product.images[0].src }}" alt="">{% endif %}</td>
+        <td>{{ s.product.name }}</td>
+        <td>{{ s.headline or "—" }}</td>
+        <td>{% if s.active %}<span class="badge badge-published">Active</span>{% else %}<span class="badge badge-draft">Hidden</span>{% endif %}</td>
+        <td>
+          <form method="post" action="/admin/hero/{{ s.id }}/move" style="display:inline;">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+            <input type="hidden" name="direction" value="up">
+            <button type="submit" class="btn btn-sm">↑</button>
+          </form>
+          <form method="post" action="/admin/hero/{{ s.id }}/move" style="display:inline;">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+            <input type="hidden" name="direction" value="down">
+            <button type="submit" class="btn btn-sm">↓</button>
+          </form>
+          <form method="post" action="/admin/hero/{{ s.id }}/delete" style="display:inline;" data-confirm="Remove this hero slide?">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+            <button type="submit" class="btn btn-sm btn-danger">Remove</button>
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
+  {% else %}
+  <div class="empty-state">No hero slides yet — the homepage falls back to featured/new-arrival products automatically.</div>
+  {% endif %}
+</div>
+
+{% endblock %}

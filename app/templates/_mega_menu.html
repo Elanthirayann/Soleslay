@@ -1,0 +1,57 @@
+{# Mega menu content for the Men/Women nav triggers.
+
+   Both menus currently render the same real category taxonomy and the
+   same dynamic featured products, because products.json has no per-item
+   `gender` tag yet (see Product.gender in models.py). This is intentional:
+   rather than inventing a fake Men-only / Women-only product split, the
+   menu stays honest and routes into the real, shared category pages.
+   Once products are tagged, swap CATEGORY_ITEMS / mega_menu_products below
+   for gender-filtered data (get_products_by_gender is already in
+   data_store.py, ready to wire in). #}
+{% macro render_mega_menu(menu_id, label) %}
+<div class="mega-menu" id="mega-{{ menu_id }}" role="menu" aria-label="{{ label }} menu">
+  <div class="mega-menu-col">
+    <h3 class="mega-menu-heading">Footwear</h3>
+    <ul class="mega-menu-list" role="none">
+      {% for slug, name in categories.items() if slug != 'belts-accessories' %}
+      <li role="none"><a role="menuitem" href="/category/{{ slug }}">{{ name }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="mega-menu-col">
+    <h3 class="mega-menu-heading">Accessories</h3>
+    <ul class="mega-menu-list" role="none">
+      {% for slug, name in categories.items() if slug == 'belts-accessories' %}
+      <li role="none"><a role="menuitem" href="/category/{{ slug }}">{{ name }}</a></li>
+      {% endfor %}
+    </ul>
+
+    <h3 class="mega-menu-heading mega-menu-heading--spaced">Featured</h3>
+    <ul class="mega-menu-list" role="none">
+      <li role="none"><a role="menuitem" href="/new-arrivals">New Arrivals</a></li>
+      <li role="none"><a role="menuitem" href="/#featured-heading">Featured Picks</a></li>
+      <li role="none"><a role="menuitem" href="/products">All Footwear</a></li>
+    </ul>
+  </div>
+
+  <div class="mega-menu-col mega-menu-col--featured">
+    <h3 class="mega-menu-heading">Handpicked right now</h3>
+    <div class="mega-menu-products">
+      {% for product in mega_menu_products %}
+      <a class="mega-product-card" role="menuitem" href="/products/{{ product.slug }}">
+        <span class="mega-product-media">
+          <img src="{{ product.images[0].src }}" alt="{{ product.images[0].alt }}" loading="lazy" width="120" height="120">
+          {% if product.is_new %}<span class="badge badge-new badge-sm">New</span>{% elif product.is_featured %}<span class="badge badge-featured badge-sm">Featured</span>{% endif %}
+        </span>
+        <span class="mega-product-info">
+          <span class="mega-product-brand">{{ product.brand }}</span>
+          <span class="mega-product-name">{{ product.name }}</span>
+          <span class="mega-product-price">{{ product.price_display or 'Enquire' }}</span>
+        </span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endmacro %}
