@@ -55,7 +55,7 @@ DEFAULT_HOMEPAGE_SECTIONS = [
     ("new_releases", "New Releases", "A secondary new-releases strip, if you want one distinct from New Arrivals."),
     ("top_picks", "Top 20 Picks", "The store's curated top picks."),
     ("featured", "Featured Products", "Hand-picked featured products."),
-    ("sneakers_feature", "Sneakers Feature", "A dedicated sneakers spotlight section."),
+    ("sneakers_feature", "Sneakers Feature", "From Onitsuka Tiger's retro runners to Jordan and Nike classics — Soleslay's sneaker rack is where most of our regulars start looking."),
     ("brand_showcase", "Brand Showcase", "One representative product per brand."),
     ("store_media", "Store Media", "Store photos/video shown on the homepage."),
 ]

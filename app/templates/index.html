@@ -475,8 +475,8 @@
     </div>
     <div class="sneaker-editorial-copy">
       <p class="section-eyebrow">The Sneaker Wall</p>
-      <h2 id="sneaker-feature-heading">{{ homepage_sections.sneakers_feature.heading if homepage_sections.sneakers_feature and homepage_sections.sneakers_feature.heading else "Sneakers, Done Right" }}</h2>
-      <p>{{ homepage_sections.sneakers_feature.description if homepage_sections.sneakers_feature and homepage_sections.sneakers_feature.description else "From Onitsuka Tiger's retro runners to Jordan and Nike classics — Soleslay's sneaker rack is where most of our regulars start looking." }}</p>
+      <h2 id="sneaker-feature-heading">{{ homepage_sections.sneakers_feature.heading if homepage_sections.sneakers_feature and homepage_sections.sneakers_feature.heading and homepage_sections.sneakers_feature.heading != "Sneakers Feature" else "Sneakers, Done Right" }}</h2>
+      <p>{{ homepage_sections.sneakers_feature.description if homepage_sections.sneakers_feature and homepage_sections.sneakers_feature.description and "spotlight" not in homepage_sections.sneakers_feature.description.lower() else "From Onitsuka Tiger's retro runners to Jordan and Nike classics — Soleslay's sneaker rack is where most of our regulars start looking." }}</p>
       <a class="btn btn-primary" href="{{ homepage_sections.sneakers_feature.cta_url if homepage_sections.sneakers_feature and homepage_sections.sneakers_feature.cta_url else '/category/sneakers' }}">{{ homepage_sections.sneakers_feature.cta_label if homepage_sections.sneakers_feature and homepage_sections.sneakers_feature.cta_label else "Shop Sneakers" }}</a>
       <div class="sneaker-editorial-support">
         {% for product in sneaker_feature[1:5] %}

@@ -4964,6 +4964,65 @@ p {
 @media (max-width: 900px) {
   .sneaker-editorial-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .sneaker-editorial-visual {
+    aspect-ratio: 16 / 10;
+    border-radius: 18px;
+  }
+
+  .sneaker-editorial-visual img {
+    padding: 16px;
+    object-fit: contain;
+  }
+
+  .sneaker-editorial-copy h2 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .sneaker-editorial-copy p {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    margin-bottom: 18px;
+  }
+
+  .sneaker-editorial-support {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 22px;
+    width: 100%;
+  }
+
+  .sneaker-support-card {
+    width: 100%;
+    gap: 6px;
+  }
+
+  .sneaker-support-card img {
+    width: 100%;
+    max-width: 74px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    padding: 6px;
+    background: #FFFFFF;
+    border: 1px solid rgba(23, 26, 30, 0.06);
+    border-radius: 12px;
+  }
+
+  .sneaker-support-card span {
+    font-size: 0.70rem;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    display: block;
+    width: 100%;
   }
 }
 
