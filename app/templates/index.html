@@ -396,6 +396,7 @@
           <span class="release-rail-list-title">More New Arrivals</span>
           <a href="/products?sort=newest" class="release-rail-view-all">Browse all &rarr;</a>
         </div>
+        <div class="release-rail-items-track">
         {% for product in new_arrivals[1:6] %}
         <a class="release-rail-item" href="/products/{{ product.slug }}">
           <div class="release-rail-thumb">
@@ -411,6 +412,7 @@
           </span>
         </a>
         {% endfor %}
+        </div>
       </div>
       {% endif %}
     </div>

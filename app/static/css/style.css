@@ -4552,6 +4552,12 @@ p {
   justify-content: center;
 }
 
+.release-rail-items-track {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .release-rail-list-head {
   display: flex;
   align-items: center;
@@ -4668,45 +4674,142 @@ p {
 
   .release-feature {
     border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  }
+
+  .release-feature-desc {
+    display: none;
   }
 
   .release-feature-info {
-    padding: 16px 16px 18px;
+    padding: 16px 18px 18px;
   }
 
   .release-feature-title {
-    font-size: 1.25rem;
-    line-height: 1.2;
+    font-size: 1.18rem;
+    line-height: 1.25;
+    margin-bottom: 8px;
   }
 
   .release-feature-media {
     aspect-ratio: 16 / 10;
-    background: #FFFFFF;
+    background: #F8FAFC;
+    border-bottom: 1px solid rgba(23, 26, 30, 0.05);
   }
 
   .release-feature-media img {
-    padding: 8px 12px;
+    padding: 12px;
     object-fit: contain;
   }
 
+  .release-feature-footer {
+    padding-top: 14px;
+    margin-top: 4px;
+  }
+
+  .release-feature-price {
+    font-size: 1.15rem;
+  }
+
+  .release-feature-btn {
+    padding: 9px 18px;
+    font-size: 0.78rem;
+  }
+
   .release-rail-list {
-    padding: 16px 14px;
+    padding: 16px;
     border-radius: 18px;
+    background: #FFFFFF;
+    overflow: hidden;
+  }
+
+  .release-rail-list-head {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+
+  .release-rail-items-track {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+    padding-top: 2px;
+    scrollbar-width: none;
+  }
+
+  .release-rail-items-track::-webkit-scrollbar {
+    display: none;
   }
 
   .release-rail-item {
-    padding: 8px;
-    gap: 12px;
+    flex: 0 0 155px;
+    scroll-snap-align: start;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    border-radius: 14px;
+    background: #F8FAFC;
+    border: 1px solid rgba(23, 26, 30, 0.06);
+    gap: 8px;
+    transition: transform 0.15s ease;
+  }
+
+  .release-rail-item:hover {
+    transform: translateY(-2px);
   }
 
   .release-rail-thumb {
-    width: 52px;
-    height: 52px;
-    padding: 4px;
+    width: 100%;
+    height: 110px;
+    background: #F1F5F9;
+    border-radius: 10px;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(23, 26, 30, 0.04);
+  }
+
+  .release-rail-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .release-rail-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .release-rail-brand {
+    font-size: 0.65rem;
+    margin-bottom: 2px;
   }
 
   .release-rail-name {
-    font-size: 0.86rem;
+    font-size: 0.80rem;
+    font-weight: 700;
+    color: #0F172A;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: 100%;
+  }
+
+  .release-rail-price {
+    font-size: 0.78rem;
+    font-weight: 800;
+    color: #047857;
+    margin-top: 3px;
+  }
+
+  .release-rail-arrow {
+    display: none;
   }
 }
 
@@ -8567,6 +8670,14 @@ section[aria-labelledby="similar-heading"] h2 {
   font-weight: 800;
 }
 
+.vault-btn-label-short {
+  display: none;
+}
+
+.vault-btn-label-long {
+  display: inline;
+}
+
 .vault-btn--stealth .vault-btn-arrow {
   flex-shrink: 0;
   width: 12px;
@@ -11300,11 +11411,11 @@ section[aria-labelledby="similar-heading"] h2 {
   }
 }
 
-/* 2. Floating Contact Dock Scaling on Mobile */
+/* 2. Floating Contact Dock Scaling & Compact Mobile Action Buttons */
 @media (max-width: 600px) {
   .floating-contact-dock {
-    right: 12px;
-    bottom: 12px;
+    right: 14px;
+    bottom: max(14px, env(safe-area-inset-bottom, 14px));
     flex-direction: row;
     gap: 8px;
     z-index: 80;
@@ -11312,14 +11423,39 @@ section[aria-labelledby="similar-heading"] h2 {
 
   .floating-contact-dock .whatsapp-fab,
   .floating-contact-dock .instagram-fab {
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
   }
 
   .floating-contact-dock .whatsapp-fab svg,
   .floating-contact-dock .instagram-fab svg {
-    width: 20px;
-    height: 20px;
+    width: 19px;
+    height: 19px;
+  }
+
+  /* Mobile Product Card Action Button - Compact & Balanced */
+  .vault-btn-label-long {
+    display: none !important;
+  }
+
+  .vault-btn-label-short {
+    display: inline !important;
+  }
+
+  .vault-btn--stealth {
+    padding: 8px 10px !important;
+    gap: 6px !important;
+    font-size: 0.76rem !important;
+  }
+
+  .vault-btn--stealth .vault-btn-label {
+    letter-spacing: 0.02em !important;
+    font-weight: 700 !important;
+  }
+
+  .vault-btn--stealth .vault-btn-icon {
+    width: 14px !important;
+    height: 14px !important;
   }
 }
 
