@@ -8828,6 +8828,10 @@ section[aria-labelledby="similar-heading"] h2 {
   max-width: 280px;
 }
 
+body:has(.product-detail) > .breadcrumbs {
+  display: none !important;
+}
+
 /* Main PDP Grid */
 .product-detail-grid {
   display: grid;
@@ -10696,13 +10700,18 @@ section[aria-labelledby="similar-heading"] h2 {
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   width: 100%;
+  align-items: start;
+  height: auto;
+  box-sizing: border-box;
 }
 
+.thumb-modern.zine-lookbook-tile,
 .zine-lookbook-tile {
   position: relative;
   display: flex !important;
   flex-direction: column;
   align-items: stretch;
+  align-self: start;
   background: #FFFFFF;
   border: 1.5px solid rgba(15, 23, 42, 0.10);
   border-radius: 14px;
@@ -10712,13 +10721,19 @@ section[aria-labelledby="similar-heading"] h2 {
   transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
   overflow: hidden;
-  width: auto !important;
+  width: 100% !important;
   height: auto !important;
+  min-height: 0 !important;
+  max-height: 140px;
+  flex: 0 0 auto;
+  box-sizing: border-box;
 }
 
 .zine-tile-thumb-wrap {
   width: 100%;
   aspect-ratio: 1 / 1;
+  max-height: 84px;
+  min-height: 0;
   background: radial-gradient(circle at 50% 40%, #FFFFFF 0%, #F8FAFC 70%, #F1F5F9 100%);
   border-radius: 8px;
   overflow: hidden;
@@ -10727,13 +10742,19 @@ section[aria-labelledby="similar-heading"] h2 {
   justify-content: center;
   padding: 6px;
   margin-bottom: 6px;
+  flex-shrink: 0;
+  box-sizing: border-box;
 }
 
+.thumb-modern.zine-lookbook-tile img,
 .zine-tile-thumb-wrap img {
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
+  max-height: 100% !important;
   object-fit: contain;
   transition: transform 0.25s ease;
+  flex-shrink: 0;
+  display: block;
 }
 
 .zine-tile-meta {
@@ -10741,6 +10762,8 @@ section[aria-labelledby="similar-heading"] h2 {
   flex-direction: column;
   gap: 2px;
   padding: 0 2px;
+  min-height: 0;
+  flex-shrink: 0;
 }
 
 .zine-tile-tag {
@@ -10749,6 +10772,7 @@ section[aria-labelledby="similar-heading"] h2 {
   letter-spacing: 0.05em;
   color: #64748B;
   text-transform: uppercase;
+  line-height: 1.1;
 }
 
 .zine-tile-name {
@@ -11093,75 +11117,186 @@ section[aria-labelledby="similar-heading"] h2 {
   font-size: 0.68rem;
 }
 
-/* Mobile & Tablet Responsiveness for PDP Editorial Layout */
+/* ==========================================================================
+   MULTI-DEVICE RESPONSIVENESS FOR PDP EDITORIAL (320px to 1024px+)
+   ========================================================================== */
+
+/* Tablets & Small Laptops (768px – 1024px) */
 @media (max-width: 1024px) {
+  .product-detail-grid,
   .pdp-zine-layout {
-    grid-template-columns: 1fr;
-    gap: 36px;
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    align-items: start !important;
   }
 
-  .zine-gallery-column {
-    position: static;
+  /* Completely eliminate sticky pinning on mobile/tablets so gallery never overlaps dossier */
+  .product-gallery-modern,
+  .zine-gallery-column,
+  .product-gallery-stage {
+    position: static !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    z-index: 1 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    transform: none !important;
+    float: none !important;
   }
 
+  .product-dossier,
   .zine-dossier {
-    padding-left: 0;
+    position: static !important;
+    padding-left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .thumb-modern.zine-lookbook-tile,
+  .zine-lookbook-tile {
+    max-height: 130px !important;
+  }
+
+  .zine-tile-thumb-wrap {
+    max-height: 78px !important;
   }
 }
 
+/* Tablets (Portrait: 480px – 768px) */
+@media (max-width: 768px) {
+  .pdp-breadcrumbs {
+    padding: 14px 16px 6px !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+  }
+
+  .pdp-breadcrumbs::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .pdp-breadcrumb-list {
+    flex-wrap: nowrap !important;
+    white-space: nowrap !important;
+  }
+
+  .pdp-breadcrumb-current {
+    max-width: 200px !important;
+  }
+
+  .thumb-modern.zine-lookbook-tile,
+  .zine-lookbook-tile {
+    max-height: 115px !important;
+    padding: 6px !important;
+  }
+
+  .zine-tile-thumb-wrap {
+    max-height: 70px !important;
+  }
+
+  .zine-tile-tag {
+    font-size: 0.64rem !important;
+  }
+}
+
+/* Standard Smartphones (Android & iPhones: 360px – 640px) */
 @media (max-width: 640px) {
   .pdp-zine-layout {
-    gap: 24px;
+    gap: 20px !important;
   }
 
   .zine-gallery-stage {
-    max-width: 100%;
+    max-width: 100% !important;
   }
 
   .gallery-stage-nav {
-    width: 36px;
-    height: 36px;
+    width: 36px !important;
+    height: 36px !important;
   }
 
   .gallery-stage-nav--prev {
-    left: 10px;
+    left: 10px !important;
   }
 
   .gallery-stage-nav--next {
-    right: 10px;
+    right: 10px !important;
   }
 
   .zine-stage-footer {
-    bottom: 12px;
-    left: 12px;
-    right: 12px;
+    bottom: 12px !important;
+    left: 12px !important;
+    right: 12px !important;
   }
 
   .zine-counter-pill,
   .zine-zoom-btn {
-    padding: 5px 10px;
-    font-size: 0.68rem;
+    padding: 5px 10px !important;
+    font-size: 0.68rem !important;
   }
 
+  /* Perfectly constrained 4-column lookbook strip that never stretches */
   .zine-lookbook-strip {
+    display: grid !important;
     grid-template-columns: repeat(4, 1fr) !important;
     gap: 6px !important;
+    width: 100% !important;
+    align-items: start !important;
+    margin-top: 10px !important;
   }
 
+  .thumb-modern.zine-lookbook-tile,
   .zine-lookbook-tile {
-    padding: 5px !important;
+    padding: 6px 4px !important;
     border-radius: 10px !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: 96px !important;
+    flex: 0 0 auto !important;
+    align-self: start !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
   }
 
   .zine-tile-thumb-wrap {
-    margin-bottom: 2px !important;
+    width: 100% !important;
+    aspect-ratio: 1 / 1 !important;
+    max-height: 62px !important;
+    min-height: 0 !important;
+    margin-bottom: 3px !important;
     border-radius: 6px !important;
+    padding: 3px !important;
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .thumb-modern.zine-lookbook-tile img,
+  .zine-tile-thumb-wrap img {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+    flex-shrink: 0 !important;
+    display: block !important;
+  }
+
+  .zine-tile-meta {
+    padding: 0 1px !important;
+    min-height: 0 !important;
+    flex-shrink: 0 !important;
   }
 
   .zine-tile-tag {
-    font-size: 0.60rem !important;
+    font-size: 0.58rem !important;
+    letter-spacing: 0.02em !important;
     text-align: center !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
     display: block !important;
+    line-height: 1.1 !important;
   }
 
   .zine-tile-name {
@@ -11169,7 +11304,7 @@ section[aria-labelledby="similar-heading"] h2 {
   }
 
   .zine-ghost-brand {
-    font-size: 3.5rem;
+    font-size: 3.5rem !important;
   }
 
   .zine-brand {
@@ -11181,22 +11316,25 @@ section[aria-labelledby="similar-heading"] h2 {
   }
 
   .pdp-sku-row {
-    gap: 6px;
+    gap: 6px !important;
   }
 
   .pdp-meta-pill {
-    font-size: 0.64rem;
-    padding: 3px 8px;
+    font-size: 0.64rem !important;
+    padding: 3px 8px !important;
   }
 
   .pdp-size-chips {
-    gap: 6px;
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 6px !important;
   }
 
   .pdp-size-chip {
-    flex: 1 1 calc(25% - 6px);
-    min-width: 60px;
-    padding: 8px 4px;
+    min-width: 0 !important;
+    width: 100% !important;
+    padding: 8px 2px !important;
+    font-size: 0.82rem !important;
   }
 
   .pdp-sourcing-prompt-bar {
@@ -11227,6 +11365,101 @@ section[aria-labelledby="similar-heading"] h2 {
   .pdp-btn--obsidian,
   .zine-btn--instagram {
     padding: 14px 18px !important;
+  }
+}
+
+/* Small Mobile Devices (320px – 480px, including 390px iPhone & 360px Android) */
+@media (max-width: 480px) {
+  .section.product-detail {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .product-detail .section-inner {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .zine-lookbook-strip {
+    gap: 5px !important;
+  }
+
+  .thumb-modern.zine-lookbook-tile,
+  .zine-lookbook-tile {
+    padding: 5px 3px !important;
+    border-radius: 9px !important;
+    max-height: 90px !important;
+  }
+
+  .zine-tile-thumb-wrap {
+    max-height: 58px !important;
+  }
+
+  .zine-tile-tag {
+    font-size: 0.55rem !important;
+  }
+}
+
+/* Ultra-Compact & Legacy Phones (320px – 360px) */
+@media (max-width: 360px) {
+  .section.product-detail {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  .pdp-breadcrumb-current {
+    max-width: 140px !important;
+  }
+
+  .zine-issue-badge,
+  .gallery-badge-status {
+    font-size: 0.58rem !important;
+    padding: 4px 8px !important;
+  }
+
+  .gallery-stage-nav {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .zine-counter-pill,
+  .zine-zoom-btn {
+    padding: 4px 8px !important;
+    font-size: 0.62rem !important;
+  }
+
+  .zine-lookbook-strip {
+    gap: 4px !important;
+  }
+
+  .thumb-modern.zine-lookbook-tile,
+  .zine-lookbook-tile {
+    padding: 4px 2px !important;
+    border-radius: 8px !important;
+    max-height: 82px !important;
+  }
+
+  .zine-tile-thumb-wrap {
+    max-height: 50px !important;
+    padding: 2px !important;
+    border-radius: 5px !important;
+  }
+
+  .zine-tile-tag {
+    font-size: 0.50rem !important;
+    letter-spacing: 0 !important;
+  }
+
+  .pdp-size-chips {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  .zine-brand {
+    font-size: clamp(2.0rem, 8vw, 2.5rem) !important;
+  }
+
+  .zine-title {
+    font-size: clamp(1.1rem, 4vw, 1.35rem) !important;
   }
 }
 
