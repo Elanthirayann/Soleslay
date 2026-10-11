@@ -132,7 +132,7 @@
   </a>
 </nav>
 
-{% if breadcrumbs %}
+{% if breadcrumbs and not product %}
 <nav class="breadcrumbs" aria-label="Breadcrumb">
   <ol>
     {% for name, path in breadcrumbs %}

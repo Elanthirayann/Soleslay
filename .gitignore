@@ -31,14 +31,11 @@ env/
 ENV/
 
 # Environment variables & local secrets
-.env
-.env.local
 .env.*.local
 
 # Vercel & IDE
 .vercel/
 .idea/
-.vscode/
 *.swp
 *.swo
 
@@ -50,3 +47,5 @@ desktop.ini
 # Scratch screenshots / debug files (root)
 test_*.png
 hero_scroll_exploded_*.png
+config.bat
+node_modules
